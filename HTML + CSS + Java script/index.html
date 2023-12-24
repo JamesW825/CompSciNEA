@@ -26,11 +26,11 @@
             const button = document.getElementById('myButton');
             button.addEventListener('click', () => {
                 // Make the API request using the fetch() function
-                fetch('YOUR_API_ENDPOINT_URL', {
+                fetch('https://ubiquitous-garbanzo-5j7x9pwvpp5cvpww.github.dev/', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization': 'YOUR_API_KEY'
+                        'Authorization': 'YOUR_API_KEY_HERE'
                         }
                 })
                 .then(response => response.json())
