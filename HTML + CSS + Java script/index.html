@@ -20,7 +20,6 @@
         <input type="checkbox" id="Circle" name="CircleLine"><br>
         <label for="District"> District line</label>
         <input type="checkbox" id="District" name="DistrictLine"><br>
-
     </form>
     <br>
     <!--Link and download of a tube map.-->
@@ -28,32 +27,6 @@
     <a href="https://content.tfl.gov.uk/large-print-tube-map.pdf"> Get a tube map here! </a><br><br>
     
     <button onclick="myFunction()" id="myButton">Refresh live data</button><br><br>
-    
-    <script>
-        function myFunction() {
-            const button = document.getElementById('myButton');
-            button.addEventListener('click', () => {
-                // Make the API request using the fetch() function
-                fetch('https://api.tfl.gov.uk/Line/central,circle,district/Status?detail={}', {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'app_key': 'c3dd5c006828420c9f7696a37292384e',
-                        'app_id': 'f1b9b8a5',
-                        'Cache-Control': 'no-cache'
-                    }
-                })
-                .then(response => response.json())
-                .then(data => {
-                // Handle the response data here
-                console.log(data);
-                })
-                .catch(error => {
-                // Handle any errors that occur during the request
-                console.error(error);
-                });
-            });
-        }
-    </script>
+    <script src="Script.js"></script>
 </body>
 </html>
