@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Visit and read the 'README.md' file for a more in-depth description.">
+    <meta name="keywords" content="HTML, CSS, Java script, Python, NEA, Project, Tube, Travel, London, Underground, Transport, TFL, API, Live data, Map, Line">
+    <link rel="stylesheet" href="Styles.css">
     <title>Tube Travel - NEA Project</title>
 </head>
 
@@ -32,7 +34,7 @@
             const button = document.getElementById('myButton');
             button.addEventListener('click', () => {
                 // Make the API request using the fetch() function
-                fetch('https://api.tfl.gov.uk/Line/central,circle,district/Status?detail={} HTTP/1.1', {
+                fetch('https://api.tfl.gov.uk/Line/central,circle,district/Status?detail={}', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
