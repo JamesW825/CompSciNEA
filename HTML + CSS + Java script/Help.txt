@@ -65,3 +65,156 @@ Remember to handle the response data inside the second `.then()` block according
 
 Let me know if you need further assistance!
 */
+
+# # # # Test 1: # # # #
+HTTP response
+HTTP/1.1 200 OK
+
+age: 0
+api-entity-payload: Line,LineStatus
+cache-control: public, must-revalidate, max-age=30, s-maxage=60
+content-encoding: gzip
+content-type: application/json; charset=utf-8
+date: Mon, 25 Dec 2023 01:00:14 GMT
+server: cloudflare
+via: 1.1 varnish
+x-api: Line
+x-aspnet-version: 4.0.30319
+x-backend: api
+x-cache: MISS
+x-cacheable: Yes. Cacheable
+x-frame-options: deny
+x-operation: Line_StatusByIdsByPathIdsQueryDetail
+x-proxy-connection: unset
+x-ttl: 60.000
+x-ttl-rule: 0
+x-varnish: 2111416713
+
+[{
+    "$type": "Tfl.Api.Presentation.Entities.Line, Tfl.Api.Presentation.Entities",
+    "id": "central",
+    "name": "Central",
+    "modeName": "tube",
+    "disruptions": [],
+    "created": "2023-12-14T17:22:01.543Z",
+    "modified": "2023-12-14T17:22:01.543Z",
+    "lineStatuses": [{
+        "$type": "Tfl.Api.Presentation.Entities.LineStatus, Tfl.Api.Presentation.Entities",
+        "id": 0,
+        "lineId": "central",
+        "statusSeverity": 20,
+        "statusSeverityDescription": "Service Closed",
+        "reason": "Central Line: Service will resume on Tuesday morning. ",
+        "created": "0001-01-01T00:00:00",
+        "validityPeriods": [{
+            "$type": "Tfl.Api.Presentation.Entities.ValidityPeriod, Tfl.Api.Presentation.Entities",
+            "fromDate": "2023-12-25T00:38:19Z",
+            "toDate": "2023-12-25T03:59:03Z",
+            "isNow": true
+        }],
+        "disruption": {
+            "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+            "category": "RealTime",
+            "categoryDescription": "RealTime",
+            "description": "Central Line: Service will resume on Tuesday morning. ",
+            "affectedRoutes": [],
+            "affectedStops": [],
+            "closureText": "serviceClosed"
+        }
+    }],
+    "routeSections": [],
+    "serviceTypes": [{
+        "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
+        "name": "Regular",
+        "uri": "/Line/Route?ids=Central&serviceTypes=Regular"
+    }, {
+        "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
+        "name": "Night",
+        "uri": "/Line/Route?ids=Central&serviceTypes=Night"
+    }],
+    "crowding": {
+        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+    }
+}, {
+    "$type": "Tfl.Api.Presentation.Entities.Line, Tfl.Api.Presentation.Entities",
+    "id": "circle",
+    "name": "Circle",
+    "modeName": "tube",
+    "disruptions": [],
+    "created": "2023-12-14T17:22:01.557Z",
+    "modified": "2023-12-14T17:22:01.557Z",
+    "lineStatuses": [{
+        "$type": "Tfl.Api.Presentation.Entities.LineStatus, Tfl.Api.Presentation.Entities",
+        "id": 0,
+        "lineId": "circle",
+        "statusSeverity": 20,
+        "statusSeverityDescription": "Service Closed",
+        "reason": "Circle Line: Service will resume on Tuesday morning. ",
+        "created": "0001-01-01T00:00:00",
+        "validityPeriods": [{
+            "$type": "Tfl.Api.Presentation.Entities.ValidityPeriod, Tfl.Api.Presentation.Entities",
+            "fromDate": "2023-12-25T00:38:26Z",
+            "toDate": "2023-12-25T03:59:03Z",
+            "isNow": true
+        }],
+        "disruption": {
+            "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+            "category": "RealTime",
+            "categoryDescription": "RealTime",
+            "description": "Circle Line: Service will resume on Tuesday morning. ",
+            "affectedRoutes": [],
+            "affectedStops": [],
+            "closureText": "serviceClosed"
+        }
+    }],
+    "routeSections": [],
+    "serviceTypes": [{
+        "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
+        "name": "Regular",
+        "uri": "/Line/Route?ids=Circle&serviceTypes=Regular"
+    }],
+    "crowding": {
+        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+    }
+}, {
+    "$type": "Tfl.Api.Presentation.Entities.Line, Tfl.Api.Presentation.Entities",
+    "id": "district",
+    "name": "District",
+    "modeName": "tube",
+    "disruptions": [],
+    "created": "2023-12-14T17:22:01.557Z",
+    "modified": "2023-12-14T17:22:01.557Z",
+    "lineStatuses": [{
+        "$type": "Tfl.Api.Presentation.Entities.LineStatus, Tfl.Api.Presentation.Entities",
+        "id": 0,
+        "lineId": "district",
+        "statusSeverity": 20,
+        "statusSeverityDescription": "Service Closed",
+        "reason": "District Line: Service will resume on Tuesday morning. ",
+        "created": "0001-01-01T00:00:00",
+        "validityPeriods": [{
+            "$type": "Tfl.Api.Presentation.Entities.ValidityPeriod, Tfl.Api.Presentation.Entities",
+            "fromDate": "2023-12-25T00:38:32Z",
+            "toDate": "2023-12-25T03:59:03Z",
+            "isNow": true
+        }],
+        "disruption": {
+            "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+            "category": "RealTime",
+            "categoryDescription": "RealTime",
+            "description": "District Line: Service will resume on Tuesday morning. ",
+            "affectedRoutes": [],
+            "affectedStops": [],
+            "closureText": "serviceClosed"
+        }
+    }],
+    "routeSections": [],
+    "serviceTypes": [{
+        "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
+        "name": "Regular",
+        "uri": "/Line/Route?ids=District&serviceTypes=Regular"
+    }],
+    "crowding": {
+        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+    }
+}]

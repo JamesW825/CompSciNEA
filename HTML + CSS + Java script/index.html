@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Visit and read the 'README.md' file for a more in-depth description.">
     <title>Tube Travel - NEA Project</title>
 </head>
 
@@ -11,14 +12,19 @@
     <h1>Tube Travel</h1>
     <h2>Tube line:</h2>
     <form>
-        <input type="checkbox" id="Central" name="CentralLine"><br>
         <label for="Central"> Central line</label>
-        <input type="checkbox" id="Circle" name="CircleLine"><br>
+        <input type="checkbox" id="Central" name="CentralLine"><br>
         <label for="Circle"> Circle line</label>
-        <input type="checkbox" id="District" name="DistrictLine"><br>
+        <input type="checkbox" id="Circle" name="CircleLine"><br>
         <label for="District"> District line</label>
+        <input type="checkbox" id="District" name="DistrictLine"><br>
+
     </form>
     <br>
+    <!--Link and download of a tube map.-->
+    <h2>Tube map link and download:</h2>
+    <a href="https://content.tfl.gov.uk/large-print-tube-map.pdf"> Get a tube map here! </a><br><br>
+    
     <button onclick="myFunction()" id="myButton">Refresh live data</button><br><br>
     
     <script>
@@ -26,12 +32,14 @@
             const button = document.getElementById('myButton');
             button.addEventListener('click', () => {
                 // Make the API request using the fetch() function
-                fetch('https://ubiquitous-garbanzo-5j7x9pwvpp5cvpww.github.dev/', {
+                fetch('https://api.tfl.gov.uk/Line/central,circle,district/Status?detail={} HTTP/1.1', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization': 'c3dd5c006828420c9f7696a37292384e'
-                        }
+                        'app_key': 'c3dd5c006828420c9f7696a37292384e',
+                        'app_id': 'f1b9b8a5',
+                        'Cache-Control': 'no-cache'
+                    }
                 })
                 .then(response => response.json())
                 .then(data => {
@@ -43,6 +51,7 @@
                 console.error(error);
                 });
             });
+        }
     </script>
 </body>
-</html> // This is the end of the HTML code
+</html>
