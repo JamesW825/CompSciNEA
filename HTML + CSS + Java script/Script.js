@@ -6,8 +6,36 @@
 </head>
 <body>
     <script>
+    // Function to handle the TfL API request
+    function callTfLAPI() {
+        // TfL Unified API endpoint (replace with your actual endpoint)
+        const apiUrl = 'https://api.tfl.gov.uk/path/to/endpoint';
+
+        // Make a GET request to the TfL API using the Fetch API
+        fetch(apiUrl)
+            .then(response => {
+                // Check if the request was successful (status code 200)
+                if (!response.ok) {
+                    throw new Error(`API request failed with status ${response.status}`);
+                }
+                // Parse the JSON response
+            return response.json();
+            })
+            .then(data => {
+                // Handle the API response data here
+                console.log('TfL API Response:', data);
+            })
+            .catch(error => {
+                // Handle errors during the API request
+                console.error('Error calling TfL API:', error.message);
+            });
+    }
+
+// Attach the function to the button click event
+document.getElementById('apiButton').addEventListener('click', callTfLAPI);
+
         function myFunction() {
-            const button = document.getElementById('myButton');
+            const button = document.getElementById('APIbutton');
             button.addEventListener('click', () => {
                 // Make the API request using the fetch() function
                 fetch('https://api.tfl.gov.uk/Line/central,circle,district/Status', {
@@ -41,7 +69,7 @@
                 console.error(error);
                 });
             });
-        }
+        } */
     </script>
 </body>
 </html>
