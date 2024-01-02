@@ -1,0 +1,118 @@
+# # # # Test/Response 1 on the Console: # # # #
+[
+    {
+        "$type": "Tfl.Api.Presentation.Entities.Line, Tfl.Api.Presentation.Entities",
+        "id": "central",
+        "name": "Central",
+        "modeName": "tube",
+        "disruptions": [],
+        "created": "2023-12-14T17:22:01.543Z",
+        "modified": "2023-12-14T17:22:01.543Z",
+        "lineStatuses": [
+            {
+                "$type": "Tfl.Api.Presentation.Entities.LineStatus, Tfl.Api.Presentation.Entities",
+                "id": 0,
+                "statusSeverity": 10,
+                "statusSeverityDescription": "Good Service",
+                "created": "0001-01-01T00:00:00",
+                "validityPeriods": []
+            }
+        ],
+        "routeSections": [],
+        "serviceTypes": [
+            {
+                "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
+                "name": "Regular",
+                "uri": "/Line/Route?ids=Central&serviceTypes=Regular"
+            },
+            {
+                "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
+                "name": "Night",
+                "uri": "/Line/Route?ids=Central&serviceTypes=Night"
+            }
+        ],
+        "crowding": {
+            "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+        }
+    },
+    {
+        "$type": "Tfl.Api.Presentation.Entities.Line, Tfl.Api.Presentation.Entities",
+        "id": "circle",
+        "name": "Circle",
+        "modeName": "tube",
+        "disruptions": [],
+        "created": "2023-12-14T17:22:01.557Z",
+        "modified": "2023-12-14T17:22:01.557Z",
+        "lineStatuses": [
+            {
+                "$type": "Tfl.Api.Presentation.Entities.LineStatus, Tfl.Api.Presentation.Entities",
+                "id": 0,
+                "statusSeverity": 10,
+                "statusSeverityDescription": "Good Service",
+                "created": "0001-01-01T00:00:00",
+                "validityPeriods": []
+            }
+        ],
+        "routeSections": [],
+        "serviceTypes": [
+            {
+                "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
+                "name": "Regular",
+                "uri": "/Line/Route?ids=Circle&serviceTypes=Regular"
+            }
+        ],
+        "crowding": {
+            "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+        }
+    },
+    {
+        "$type": "Tfl.Api.Presentation.Entities.Line, Tfl.Api.Presentation.Entities",
+        "id": "district",
+        "name": "District",
+        "modeName": "tube",
+        "disruptions": [],
+        "created": "2023-12-14T17:22:01.557Z",
+        "modified": "2023-12-14T17:22:01.557Z",
+        "lineStatuses": [
+            {
+                "$type": "Tfl.Api.Presentation.Entities.LineStatus, Tfl.Api.Presentation.Entities",
+                "id": 0,
+                "lineId": "district",
+                "statusSeverity": 3,
+                "statusSeverityDescription": "Part Suspended",
+                "reason": "District Line: No service between Turnham Green and Richmond for the rest of the day, while Network Rail fix a signal failure at Kew Gardens. Tickets are being accepted on London Buses and South Western Railway. GOOD SERVICE on the rest of the line. ",
+                "created": "0001-01-01T00:00:00",
+                "validityPeriods": [
+                    {
+                        "$type": "Tfl.Api.Presentation.Entities.ValidityPeriod, Tfl.Api.Presentation.Entities",
+                        "fromDate": "2024-01-01T22:05:33Z",
+                        "toDate": "2024-01-02T01:14:15Z",
+                        "isNow": true
+                    }
+                ],
+                "disruption": {
+                    "$type": "Tfl.Api.Presentation.Entities.Disruption, Tfl.Api.Presentation.Entities",
+                    "category": "RealTime",
+                    "categoryDescription": "RealTime",
+                    "description": "District Line: No service between Turnham Green and Richmond for the rest of the day, while Network Rail fix a signal failure at Kew Gardens. Tickets are being accepted on London Buses and South Western Railway. GOOD SERVICE on the rest of the line. ",
+                    "affectedRoutes": [],
+                    "affectedStops": [],
+                    "closureText": "partSuspended"
+                }
+            }
+        ],
+        "routeSections": [],
+        "serviceTypes": [
+            {
+                "$type": "Tfl.Api.Presentation.Entities.LineServiceTypeInfo, Tfl.Api.Presentation.Entities",
+                "name": "Regular",
+                "uri": "/Line/Route?ids=District&serviceTypes=Regular"
+            }
+        ],
+        "crowding": {
+            "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+        }
+    }
+]
+
+# # # # Test/Response 2 on the Console: # # # #

@@ -1,72 +1,4 @@
-/*
-Hey! Adding an API request to a button in HTML is a great way to make your webpage interactive. To do that, you can use JavaScript. Here's a simple example:
-
-1. First, create a button element in your HTML code with an id attribute:
-```html
-<button id="myButton">Click me!</button>
-```
-
-2. Next, add a script tag to your HTML file and write the JavaScript code inside it:
-```html
-<script>
-  // Get the button element using its id
-  const button = document.getElementById('myButton');
-
-  // Add an event listener to the button
-  button.addEventListener('click', () => {
-    // Make your API request here
-    // You can use the fetch() function or other methods to send the request
-    // Handle the response and update your webpage accordingly
-  });
-</script>
-```
-
-3. Inside the event listener function, you can make your API request using the fetch() function or other methods. Once you receive the response, you can update your webpage based on the data you get.
-
-Remember to replace the comment with your actual API request code. Let me know if you have any questions!
-
-#####
-
-Of course! I'd be happy to help you add a request for the Tfl Unified API to your HTML code. To do that, you'll need to make use of JavaScript and the fetch() function. 
-
-First, make sure you have the necessary credentials and endpoint URL for the Tfl Unified API. Once you have those, you can modify the code I provided earlier to include the API request. Here's an example:
-
-```html
-<button id="myButton">Click me!</button>
-
-<script>
-  const button = document.getElementById('myButton');
-
-  button.addEventListener('click', () => {
-    // Make the API request using the fetch() function
-    fetch('YOUR_API_ENDPOINT_URL', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'YOUR_API_KEY'
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
-      // Handle the response data here
-      console.log(data);
-    })
-    .catch(error => {
-      // Handle any errors that occur during the request
-      console.error(error);
-    });
-  });
-</script>
-```
-
-Replace `'YOUR_API_ENDPOINT_URL'` with the actual endpoint URL provided by the Tfl Unified API, and `'YOUR_API_KEY'` with your API key or any required authorization details.
-
-Remember to handle the response data inside the second `.then()` block according to your needs. You can update your webpage or perform any other actions based on the data you receive.
-
-Let me know if you need further assistance!
-*/
-
-# # # # Test 1: # # # #
+# # # # Test 1 on the web: # # # #
 HTTP response
 HTTP/1.1 200 OK
 
@@ -218,3 +150,5 @@ x-varnish: 2111416713
         "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
     }
 }]
+
+# # # # Test 2 on the web: # # # #

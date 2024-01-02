@@ -5,8 +5,7 @@ function APIcall2() {
     const primaryApiKey2 = 'c3dd5c006828420c9f7696a37292384e';
     const secondaryApiKey2 = '0358cd3e5f7b44c9a43aec6b16a73d0d';
     
-    const modes = 'tube'// const lineIds = 'central,circle,district';  // Replaced with test data
-    // const includeDetail = true; 
+    const modes = 'tube,dlr,overground' // Replaced with test data
     const apiUrl2 = `https://api.tfl.gov.uk/Line/Mode/${modes}/Disruption`; // The backticks (`) are used to create a template literal. This allows you to embed expressions or variables within a string.
 
     // Use the primary key for the app_id parameter: urlWithPrimaryApiKey2
