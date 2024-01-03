@@ -1,25 +1,87 @@
+/* Stylesheet for the website. Collate similar parts (headers, side menus, forms etc). Condense/simplify file when nearer completion (Eg: "h2"). */
+/* General styles: */
 head {
     text-align: center;
 }
-
 body {
     background-color: lightblue;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif; 
+    margin: 10px;
+    padding-top: 0px;
+}
+.page-content {
+    margin-left: 200px; /* Adjust this margin to leave space for the side menu */
+    padding: 10px;
 }
 
+/* Header styles: */
 h1 {
     color: navy;
+    margin-top: 3px;
+    margin-bottom: 5px;
     /* margin-left: 20px; */
+    text-align: center;
+}
+h2 {color: red; margin-left: 20px;}
+
+/* Side menu styles: */
+.side-menu {
+    height: 100%;
+    width: 200px;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    padding-top: 15px;
+}
+.blank-space {
+    height: 54%; /* This WILL need to be adjusted as you add more to the menu. */
+    width: 200px;
+    display: block;
+    visibility: hidden;
+    background-color: black;
+}
+#QuickMenu {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: large;
+    color: lightskyblue;
+}
+#HRmenu {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 1px;
+    color: lightgrey;
+    background-color: lightgrey;
+}
+.menu-item {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.1s;
+}
+.menu-item:hover {
+    background-color: grey;
+    border-radius: 10%;
 }
 
-h2 {
-    color: red;
-    margin-left: 20px;
-} 
+/* Forms */
+#LineSelection {
+    color: black;
+}
+#LineSelection label {
+    margin-bottom: 8px;
+}
+#LineSelection input {
+    margin-bottom: 12px;
+}
 
+/* API styles section: */
 disruptions-container {
     align-content: center; 
-    font: Arial;
     text-wrap: normal;
     /* color: red; */
     display: flex;
@@ -32,3 +94,10 @@ disruptions-container {
     border: 1px solid black;
     border-radius: 5px;
 }
+hr {
+    color: black;
+    background-color: black;
+    height: 1px;
+}
+
+/* ============= */

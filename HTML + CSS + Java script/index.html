@@ -13,24 +13,46 @@
 
 <body>
     <!--Comments are like this!-->
-    <h1>Tube Travel</h1>
-    <h2>Tube line:</h2>
-    <form>
-        <label for="Central"> Central line</label>
-        <input type="checkbox" id="Central" name="CentralLine"><br>
-        <label for="Circle"> Circle line</label>
-        <input type="checkbox" id="Circle" name="CircleLine"><br>
-        <label for="District"> District line</label>
-        <input type="checkbox" id="District" name="DistrictLine"><br>
-    </form>
-    <br>
-    <!--Link and download of a tube map.-->
-    <h2>Tube map link and download:</h2>
-    <a href="https://content.tfl.gov.uk/large-print-tube-map.pdf"> Get a tube map here! </a><br><br>
-    
-    <button id="APIbutton">Line status</button><br><br>
-
-    <button id="APIbutton2">Live disruptions</button><br><br>
-    <div id="disruptions-container"></div>
+    <div class="side-menu"> <!--This is the left side menu.-->
+        <p id="QuickMenu">Quick access:</p><hr id="HRmenu">
+        <a href="#" class="menu-item">🏠 Home & Map 🗺️</a><hr id="HRmenu">
+        <a href="#" class="menu-item">Journey Planner 📆</a><hr id="HRmenu">
+        <a href="#" class="menu-item">🚇 Line status & Disruptions ⚠️</a><hr id="HRmenu">
+        <a href="#" class="blank-space"></a><hr id="HRmenu"> <!--This leaves a gap in the side menu, so that less needed/important parts are at the bottom of the screen.-->
+        <a href="#" class="menu-item">Accessibility ♿</a><hr id="HRmenu">
+        <a href="#" class="menu-item">Settings ⚙️</a><hr id="HRmenu">
+        <a href="#" class="menu-item">About & App info ℹ️</a><hr id="HRmenu">
+        <!--Alternate menu items: 
+        
+        Additional menu items:
+        In Home/Map: An interactive map (duh); Layers function (Tube map, Night map?, Transport, Satelite etc); Tube map download button and not a link; Locate button?; 
+        Journey Planner: Form to enter start and end locations, time, date, etc; Submit button (i.e. need a request to API); 
+        Line status & Disruptions: Line status from API (i.e. open, closed, part-closed, etc); Live line disruptions (i.e. delays, planned works, etc); 
+        Ignore Accessibility. 
+        Settings: Change theme (light/dark mode etc); Change font size?; Change language?; 
+        About & App info: About the app (What it does, How it works, etc); App info (i.e. versions, etc); References/Bibliography; 
+        -->
+    </div>
+    <div class="page-content">
+        <h1>Tube Travel</h1>
+        <h2>Tube line:</h2>
+        <form id ="LineSelection">
+            <label for="Central"> Central line</label>
+            <input type="checkbox" id="Central" name="CentralLine"><br>
+            <label for="Circle"> Circle line</label>
+            <input type="checkbox" id="Circle" name="CircleLine"><br>
+            <label for="District"> District line</label>
+            <input type="checkbox" id="District" name="DistrictLine"><br>
+        </form>
+        <br>
+        <!--Link and download of a tube map.-->
+        <h2>Tube map link and download:</h2>
+        <a href="https://content.tfl.gov.uk/large-print-tube-map.pdf">Get a tube map here!</a><br><br>
+        
+        <button id="APIbutton">Live line status</button><br><br>
+        
+        <button id="APIbutton2">Live line disruptions</button><br><br>
+        <div id="disruptions-container"></div>
+    </div>
 </body>
 </html>

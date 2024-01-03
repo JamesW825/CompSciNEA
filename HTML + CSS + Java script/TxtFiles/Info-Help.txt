@@ -1,11 +1,18 @@
 ~ ~ ~ In HTML: ~ ~ ~
     1. A "defer" attribute in terms of a <script> tag, ensures that the script is executed after the HTML has been fully parsed.
-    2. 
+    2. An `href="#"` attribute is often used in anchor (<a>) tags to create a hyperlink that doesn't navigate to a new page or location but instead performs some other action on the current page. The # symbol is commonly used as a placeholder for such links.
+    3. 
 
 ~ ~ ~ In JavaScript: ~ ~ ~
     1. The backticks (`) are used to create a template literal. This allows you to embed expressions or variables within a string.
     2. The two URL components, `urlWithPrimaryApiKey` and `urlWithSecondaryApiKey`, are combined using string concatenation before making the API request. This ensures that both the `app_id` and `app_key` parameters are included in the API request, providing the necessary authentication for your application to access the TfL API.
     3. Removal of the parentheses after `callTfLAPI`. With this change, the `callTfLAPI` function will be called when the button is clicked, not immediately when setting up the event listener.
+    4. 
+
+~ ~ ~ In CSS: ~ ~ ~
+    1. The `display` property in CSS is used to specify the rendering behavior of an element. It can take various values, each affecting the layout and presentation of the element in different ways.
+    2. The `display: flex;` property is used to create a flex container. When applied to an element, it enables the flexbox layout for that element and its direct children. Flexbox is a one-dimensional layout method for laying out items in rows or columns.
+    3. You can apply styles to forms (<form>) if they have an `id=""` attribute. To do this, you need to target that specific ID.
     4. 
 
 Part 4: Decipher API response, obtaining and displaying infromation that I require. 
