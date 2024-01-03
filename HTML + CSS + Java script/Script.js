@@ -5,7 +5,7 @@ function callTfLAPI() {
     const primaryApiKey = 'c3dd5c006828420c9f7696a37292384e';
     const secondaryApiKey = '0358cd3e5f7b44c9a43aec6b16a73d0d';
     
-    const lineIds = 'central,circle,district';  // Replaced with test data
+    const lineIds = 'central,circle,district';  // Replaced with test data.
     const apiUrl = `https://api.tfl.gov.uk/Line/${lineIds}/Status/`; // The backticks (`) are used to create a template literal. This allows you to embed expressions or variables within a string.
     
     // Use the primary key for the app_id parameter: urlWithPrimaryApiKey
@@ -27,13 +27,15 @@ function callTfLAPI() {
             return response.json();
         })
         .then(data => {
-            // Handle the API response data here
+            // Handle the API response data here:
             console.log('TfL API Response:', data);
         })
         .catch(error => {
-            // Handle errors during the API request
+            // Handle errors during the API request:
             console.error('Error calling TfL API:', error.message);
         });
 }
-// Attach the function to the button click event
+// Attach the function to the button click event:
 document.getElementById('APIbutton').addEventListener('click', callTfLAPI);
+
+// ====================================================================================================
