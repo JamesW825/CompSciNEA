@@ -56,6 +56,9 @@ h2 {color: red; margin-left: 20px;}
     color: lightgrey;
     background-color: lightgrey;
 }
+.menu-section {
+    margin-bottom: 5px;
+}
 .menu-item {
     padding: 10px;
     color: white;
