@@ -58,6 +58,7 @@ h2 {color: red; margin-left: 20px;}
 }
 .menu-section {
     margin-bottom: 5px;
+    background-color: black;
 }
 .menu-item {
     padding: 10px;
@@ -71,15 +72,19 @@ h2 {color: red; margin-left: 20px;}
     border-radius: 10%;
 }
 
-/* Forms */
+/* Forms: */
+/* Line selection form: */
 #LineSelection {
     color: black;
 }
 #LineSelection label {
+    display: inline-block;
+    vertical-align: middle;
     margin-bottom: 8px;
 }
-#LineSelection input {
-    margin-bottom: 12px;
+#LineSelection input[type="checkbox"] {
+    vertical-align: middle;
+    margin-bottom: 8px;
 }
 
 /* API styles section: */
