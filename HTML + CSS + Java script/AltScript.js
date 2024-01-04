@@ -73,6 +73,7 @@ function APIcall2() {
         });
 }
 // Attach the function to the button click event
+// Removal of the parentheses after `callTfLAPI` makes it so the function will be called when the button is clicked, not immediately when setting up the event listener.
 document.getElementById('APIbutton2').addEventListener('click', APIcall2);
 
 // ====================================================================================================

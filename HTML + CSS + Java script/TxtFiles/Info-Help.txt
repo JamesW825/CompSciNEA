@@ -6,7 +6,7 @@
 ~ ~ ~ In JavaScript: ~ ~ ~
     1. The backticks (`) are used to create a template literal. This allows you to embed expressions or variables within a string.
     2. The two URL components, `urlWithPrimaryApiKey` and `urlWithSecondaryApiKey`, are combined using string concatenation before making the API request. This ensures that both the `app_id` and `app_key` parameters are included in the API request, providing the necessary authentication for your application to access the TfL API.
-    3. Removal of the parentheses after `callTfLAPI`. With this change, the `callTfLAPI` function will be called when the button is clicked, not immediately when setting up the event listener.
+    3. Removal of the parentheses() after `callTfLAPI` makes it so the function will be called when the button is clicked, not immediately when setting up the event listener.
     4. 
 
 ~ ~ ~ In CSS: ~ ~ ~
