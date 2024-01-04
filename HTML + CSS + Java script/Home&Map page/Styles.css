@@ -36,7 +36,7 @@ h2 {color: red; margin-left: 20px;}
     padding-top: 15px;
 }
 .blank-space {
-    height: 54%; /* This WILL need to be adjusted as you add more to the menu. */
+    height: 42.5%; /* This WILL need to be adjusted as you add more to the menu. */
     width: 200px;
     display: block;
     visibility: hidden;
