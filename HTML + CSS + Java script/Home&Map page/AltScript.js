@@ -7,12 +7,12 @@ function handleButtonClick(section) {
             break;
         case 'Journey Planner':
             // Navigate to the Journey Planner page: "Journey Planner.html"
-            window.location.href = 'Journey Planner.html';
+            window.location.href = 'JourneyPlan page/Journey Planner.html';
             break;
         // case 'Line Status':
-            // Navigate to the Line Status page: "Line Status.html" (not yet created)
-            // window.location.href = '';
-            // break;
+        //     Navigate to the Line Status page: "Line Status.html" (not yet created)
+        //     window.location.href = '';
+        //     break;
         // Add more cases for other sections/pages as needed.
         default:
             // Handle cases where the section doesn't match any known pages.
@@ -21,7 +21,7 @@ function handleButtonClick(section) {
             break;
     }
 }
-document.getElementById('').addEventListener('click', APIcall2);
+document.getElementById('PageButton').addEventListener('click', handleButtonClick);
 
 // A test function to call the TfL API and log the response to the console.
 function APIcall2() {
