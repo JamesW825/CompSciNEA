@@ -22,3 +22,12 @@ Part 4: Decipher API response, obtaining and displaying infromation that I requi
 Part 4.5: Get API to gather all line information. Have it be displayed in a menu that the user selects the line they wish to know about. 
     Eg: Like "TfL Go" does after clicking "Live status", only showing the lines that has isssues, then all other lines in "Good service" being as one part.
     To do this, do the equivalent of a for loop containg an if statement, to see if the API responce says/contains "Good service" to determine where the line goes.
+
+~ ~ ~ TfL API keys: ~ ~ ~
+Primary key: 
+c3dd5c006828420c9f7696a37292384e
+Secondary key:
+0358cd3e5f7b44c9a43aec6b16a73d0d
+
+~ ~ ~ Google API key: ~ ~ ~
+AIzaSyBZ-T93vP687k0WNH5Y95n7PI3yYso9_QA
