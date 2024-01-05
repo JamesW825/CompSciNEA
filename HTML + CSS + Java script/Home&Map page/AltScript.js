@@ -1,4 +1,4 @@
-// Function to switch between the "Home & Map" page and the "Journey Planner" page.
+// Function to switch between the different HTML pages.
 function handleButtonClick(section) {
     switch (section) { // The `switch` statement is used to determine which page to navigate to based on the value of the section parameter.
         case 'Home & Map':
