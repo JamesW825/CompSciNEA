@@ -27,11 +27,10 @@ function callTfLAPI() {
             return response.json();
         })
         .then(data => {
-            // Handle the API response data here:
-            console.log('TfL API Response:', data);
+            console.log('TfL API Status Response:', data);
         })
         .catch(error => {
-            // Handle errors during the API request:
+            // Handle errors during the API request
             console.error('Error calling TfL API:', error.message);
         });
 }
@@ -39,3 +38,43 @@ function callTfLAPI() {
 document.getElementById('APIbutton').addEventListener('click', callTfLAPI);
 
 // ====================================================================================================
+/*            // Handle the API response data here:
+            console.log('TfL API Line Status Response:', data);
+            
+            // Check if data is valid and contains the information you need.
+            // Putting it all together, the entire if statement evaluates to `true` only if all three conditions are met:
+            // - `data` is not `null` or `undefined`.
+            // - `data` is an array.
+            // - The array has at least one element.
+            if (data && Array.isArray(data) && data.length > 0) {
+                // Process the data:
+                const statusdisruptions = data.map(status => {
+                    return {
+                        closureText: disruption.closureText,
+                        description: disruption.description,
+                        affectedRoutes: disruption.affectedRoutes,
+                        // Add more fields as required. Change 'disruption' to 'status' if needed. !!!
+                    };
+                });
+                console.log('Processed line statuses:', status);
+
+                // Displaying the line status in the HTML file (index.html).
+                const statusContainer = document.getElementById('status-container');
+                // Clear any existing content in the container
+                statusContainer.innerHTML = '';
+                // Create and append HTML elements to display each status.
+                status.forEach(status => {
+                    const statusElement = document.createElement('div');
+                    statusElement.innerHTML = `
+                        <p><strong>Status/Closure Text:</strong> ${status.closureText}</p>
+                        <p><strong>Description:</strong> ${status.description}</p>
+                        <p><strong>Affected Routes:</strong> ${status.affectedRoutes.join(', ')}</p>
+                        <!-- Add more fields as required -->
+                        <hr>
+                    `;
+                    statusContainer.appendChild(statusElement);
+                });
+            } else {
+                console.log('No statuses/disruptions found');
+            }
+        })
