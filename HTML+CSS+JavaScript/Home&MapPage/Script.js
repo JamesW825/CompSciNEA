@@ -27,20 +27,9 @@ function callTfLAPI() {
             return response.json();
         })
         .then(data => {
-            console.log('TfL API Status Response:', data);
-        })
-        .catch(error => {
-            // Handle errors during the API request
-            console.error('Error calling TfL API:', error.message);
-        });
-}
-// Attach the function to the button click event:
-document.getElementById('APIbutton').addEventListener('click', callTfLAPI);
-
-// ====================================================================================================
-/*            // Handle the API response data here:
+                        // Handle the API response data here:
             console.log('TfL API Line Status Response:', data);
-            
+
             // Check if data is valid and contains the information you need.
             // Putting it all together, the entire if statement evaluates to `true` only if all three conditions are met:
             // - `data` is not `null` or `undefined`.
@@ -48,11 +37,11 @@ document.getElementById('APIbutton').addEventListener('click', callTfLAPI);
             // - The array has at least one element.
             if (data && Array.isArray(data) && data.length > 0) {
                 // Process the data:
-                const statusdisruptions = data.map(status => {
+                const status = data.map(status => {
                     return {
-                        closureText: disruption.closureText,
-                        description: disruption.description,
-                        affectedRoutes: disruption.affectedRoutes,
+                        closureText: status.closureText,
+                        description: status.description,
+                        affectedRoutes: status.affectedRoutes,
                         // Add more fields as required. Change 'disruption' to 'status' if needed. !!!
                     };
                 });
@@ -78,3 +67,12 @@ document.getElementById('APIbutton').addEventListener('click', callTfLAPI);
                 console.log('No statuses/disruptions found');
             }
         })
+        .catch(error => {
+            // Handle errors during the API request
+            console.error('Error calling TfL API:', error.message);
+        });
+}
+// Attach the function to the button click event:
+document.getElementById('APIbutton').addEventListener('click', callTfLAPI);
+
+// ====================================================================================================
