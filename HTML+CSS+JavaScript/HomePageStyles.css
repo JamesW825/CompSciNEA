@@ -1,18 +1,5 @@
 /* Stylesheet for the Home page. Collate similar parts (headers, side menus, forms etc). Condense/simplify file when nearer completion, take header 2 for example. */
 /* General styles: */
-head {
-    text-align: center;
-}
-body {
-    background-color: lightblue;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 10px;
-    padding-top: 0px;
-}
-.page-content {
-    margin-left: 200px; /* Adjust this margin to leave space for the side menu */
-    padding: 10px;
-}
 
 /* Header styles: */
 h1 {

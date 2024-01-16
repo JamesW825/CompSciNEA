@@ -5,44 +5,74 @@
     <link rel="stylesheet" href="GlobalStyles.css"> <!--GlobalStyles.css is the file that WOULD contain any styles that apply to all pages.-->
     <!--Journey Planner page:-->
     <title>Simple Marker</title>
-    
-    <!-- The callback parameter is required, so we use console.debug as a noop -->
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZ-T93vP687k0WNH5Y95n7PI3yYso9_QA&callback=console.debug&libraries=maps,marker&v=beta">
-    </script>
+        
+    <!--The callback parameter is required, so we use console.debug as a noop -->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZ-T93vP687k0WNH5Y95n7PI3yYso9_QA&callback=console.debug&libraries=maps,marker&v=beta"></script>
     <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      gmp-map {
-        height: 80%;
-        width: 80%;
-        text-align: center;
-      }
-
-      /* Optional: Makes the sample page fill the window. */
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
+        /* Always set the map height explicitly to define the size of the div element that contains the map. */
+        gmp-map {
+            height: 80%;
+            width: 80%;
+            text-align: center;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
     </style>
-  </head>
-  <body>
-    <gmp-map center="51.51127624511719,-0.1" zoom="12" map-id="DEMO_MAP_ID">
-      <gmp-advanced-marker position="51.51127624511719,-0.1" title="My location">
-      </gmp-advanced-marker>
-    </gmp-map>
-  </body>
+</head>
+    <body>
+        <div class="side-menu"> <!--This is the left side menu.-->
+            <p id="QuickMenu">Quick access:</p><hr id="HRmenu">
+            <!--<div class="menu-section"> (In comment as this is the home page.)
+                    <a href="#" class="menu-item">🏠 Home & Map 🗺️</a>
+                    <button onclick="handleButtonClick('Home')">Button for Home</button>
+                    <hr id="HRmenu">
+            </div>-->
+            <div class="menu-section">
+                    <a href="JourneyPlannerPage.html" class="menu-item">
+                            <button class="menu-item" id="PageButton">Journey Planner 📆</button>
+                    </a>
+                    <hr id="HRmenu">
+            </div>
+
+            <a href="#" class="menu-item">🏠 Home & Map 🗺️</a><hr id="HRmenu">
+            <a href="#" class="menu-item">Journey Planner 📆</a><hr id="HRmenu">
+            <a href="#" class="menu-item">🚇 Line status & Disruptions ⚠️</a><hr id="HRmenu">
+            <a href="#" class="blank-space"></a><hr id="HRmenu"> <!--This leaves a gap in the side menu, so that less needed/important parts are at the bottom of the screen.-->
+            <a href="#" class="menu-item">Accessibility ♿</a><hr id="HRmenu">
+            <a href="#" class="menu-item">Settings ⚙️</a><hr id="HRmenu">
+            <a href="#" class="menu-item">About & App info ℹ️</a><hr id="HRmenu">
+            <!--Alternate menu items: 
+            
+            Additional menu items:
+            In Home/Map: An interactive map (duh); Layers function (Tube map, Night map?, Transport, Satelite etc); Tube map download button and not a link; Locate button?; 
+            Journey Planner: Form to enter start and end locations, time, date, etc; Submit button (i.e. need a request to API); 
+            Line status & Disruptions: Line status from API (i.e. open, closed, part-closed, etc); Live line disruptions (i.e. delays, planned works, etc); 
+            Ignore Accessibility. 
+            Settings: Change theme (light/dark mode etc); Change font size?; Change language?; 
+            About & App info: About the app (What it does, How it works, etc); App info (i.e. versions, etc); References/Bibliography; 
+            -->
+    </div>
+
+    </body>
+        <gmp-map center="51.51127624511719,-0.1" zoom="12" map-id="DEMO_MAP_ID">
+            <gmp-advanced-marker position="51.51127624511719,-0.1" title="My location">
+            </gmp-advanced-marker>
+        </gmp-map>  
 </html>
 <!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Journey Planner 📆</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Journey Planner 📆</title>
 </head>
 <body>
-    <h1>Hello! This is the journey planner page.</h1>
+        <h1>Hello! This is the journey planner page.</h1>
 </body>
 </html>
