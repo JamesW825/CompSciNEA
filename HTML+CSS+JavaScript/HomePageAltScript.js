@@ -4,21 +4,21 @@ function handleButtonClick(section) {
     switch (section) { // The `switch` statement is used to determine which page to navigate to based on the value of the section parameter.
         case 'Home & Map': 
             // Navigate to the Home page: "index.html"
-            window.location.href = 'index.html';
+            window.location.href = 'HomePage.html';
             break;
         case 'Journey Planner':
-            // Navigate to the Journey Planner page: "Journey Planner.html"
+            // Navigate to the Journey Planner page: "JourneyPlannerPage.html"
             window.location.href = 'HTML%20+%20CSS%20+%20Java script/JourneyPlan%20page/Journey%20Planner.html';
             break; 
         // case 'Line Status':
-        //     Navigate to the Line Status page: "Line Status.html" (not yet created)
+        //     Navigate to the Line Status page: "LineStatusPage.html" (not yet created)
         //     window.location.href = '';
         //     break;
         // Add more cases for other sections/pages as needed.
         default:
             // Handle cases where the section doesn't match any known pages.
             console.error(`Unknown section: ${section}, reverting to Home page`);
-            window.location.href = 'index.html';
+            window.location.href = 'HomePage.html';
             break;
     }
 }
