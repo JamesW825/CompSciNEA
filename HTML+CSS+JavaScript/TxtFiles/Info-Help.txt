@@ -31,3 +31,6 @@ Secondary key:
 
 ~ ~ ~ Google API key: ~ ~ ~
 AIzaSyBZ-T93vP687k0WNH5Y95n7PI3yYso9_QA
+
+~ ~ ~ GitHub extensions: ~ ~ ~
+    1. Better Comments
