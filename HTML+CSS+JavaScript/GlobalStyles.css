@@ -1,5 +1,6 @@
-/* The purpose of this file is for any styles that can apply to all pages of the website, in order to keep consistency. 
+/* This file is for any styles that applies to all pages of the website, in order to keep consistency. 
 For example: side menu for page navigation, background colours, fonts and more. */
+
 /* General styles: */
 head {
     text-align: center;
@@ -61,4 +62,13 @@ body {
 .menu-item:hover {
     background-color: grey;
     border-radius: 10%;
+}
+
+/* Interactive Map styles: */
+gmp-map {
+    height: 80%;
+    width: 80%;
+    margin-top: 50px;
+    margin-left: 230px;
+    text-align: center;
 }
