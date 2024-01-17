@@ -1,6 +1,6 @@
 // This file contains the JavaScript code that that applies to all pages of the website, in order to keep consistency. For example, the page switching function below:
 
-// Function to switch between the different HTML pages.
+// Function to switch between the different HTML pages. WORKING!
 function PageSwitchCase(section) {
     console.log('Page change button clicked'); // To check the page button switch handler is working.
     switch (section) { // The `switch` statement is used to determine which page to navigate to based on the value of the section parameter.
@@ -25,3 +25,20 @@ function PageSwitchCase(section) {
     }
 }
 document.getElementById('PageButton').addEventListener('click', PageSwitchCase);
+
+// Function for the Interactive Map. (Home page and Journey Planner page only)
+function initMap() {
+    const map = new google.maps.Map(document.getElementById("map"), {
+      center: { lat: -34.397, lng: 150.644 },
+      zoom: 8,
+      styles: [
+        {
+          featureType: "poi",
+          stylers: [{ visibility: "off" }],
+        },
+      ],
+    });
+ 
+    const transitLayer = new google.maps.TransitLayer();
+    transitLayer.setMap(map);
+}

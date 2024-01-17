@@ -3,25 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="GlobalStyles.css"> <!--GlobalStyles.css is the file that WOULD contain any styles that applies to all pages.-->
-    <script src="GlobalScript.js"></script> <!--GlobalScript.js is the file that WOULD contain any JavaScript code that applies to all pages.-->
     <!--Journey Planner page:-->
     <link rel="stylesheet" href="JourneyPlannerStyles.css"> <!--JourneyPlannerStyles.css is the file that contains the CSS code for the styles and looks of the Journey planner page.-->
-    <script src="JourneyPlannerScript.js" defer></script> <!--JourneyPlannerScript.js is the file that contains the JavaScript code for the Journey planner page. A "defer" attribute ensures that the script is executed after the HTML has been fully parsed.-->
     <title>Tube Travel - Journey Planner - NEA Project </title>
-    <!--Script link for the map.-->
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZ-T93vP687k0WNH5Y95n7PI3yYso9_QA&callback=console.debug&libraries=maps,marker&v=beta"></script>
 </head>
 <body>
     <div class="side-menu"> <!--This is the left side menu.-->
         <p id="QuickMenu">Quick access:</p><hr id="HRmenu">
-        <!--<div class="menu-section"> (In comment as this is the home page.)
-            <a href="#" class="menu-item">🏠 Home & Map 🗺️</a>
-            <button onclick="handleButtonClick('Home')">Button for Home</button>
-            <hr id="HRmenu">
-        </div>-->
         <div class="menu-section">
-            <a href="JourneyPlannerPage.html" class="menu-item">
-                <button class="menu-item" id="PageButton">Journey Planner 📆</button>
+            <a href="HomePage.html" class="menu-item">
+                <button class="menu-item" id="PageButton">🏠 Home & Map 🗺️</button>
             </a>
             <hr id="HRmenu"> <!--The name "HRmenu" was given due to the tag <hr> to display a horizontal line/'rule'.-->
         </div>
@@ -44,12 +35,17 @@
         About & App info: About the app (What it does, How it works, etc); App info (i.e. versions, etc); References/Bibliography; 
         -->
     </div>
-    <div id="InteractiveMap">
-        
-    </div>
-</body>
-        <!--<gmp-map center="51.51127624511719,-0.1" zoom="12" map-id="DEMO_MAP_ID">
+    <div id="InteractiveMap" height="200" width="300">
+        <gmp-map center="51.51127624511719,-0.1" zoom="12" map-id="DEMO_MAP_ID">
             <gmp-advanced-marker position="51.51127624511719,-0.1" title="My location">
             </gmp-advanced-marker>
-        </gmp-map>-->
+        </gmp-map>
+    </div>
+
+    <!--Script sources: A "defer" attribute ensures that the script is executed after the HTML has been fully parsed.-->
+    <script src="GlobalScript.js" defer></script> <!--GlobalScript.js is the file that WOULD contain any JavaScript code that applies to all pages.-->
+    <script src="JourneyPlannerScript.js" defer></script> <!--JourneyPlannerScript.js is the file that contains the JavaScript code for the Journey planner page. A "defer" attribute ensures that the script is executed after the HTML has been fully parsed.-->
+    <!--Script link for the map.-->
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZ-T93vP687k0WNH5Y95n7PI3yYso9_QA&callback=console.debug&libraries=maps,marker&v=beta"></script>
+</body>
 </html>
