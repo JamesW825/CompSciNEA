@@ -35,17 +35,20 @@
         About & App info: About the app (What it does, How it works, etc); App info (i.e. versions, etc); References/Bibliography; 
         -->
     </div>
-    <div id="InteractiveMap" height="200" width="300">
-        <gmp-map center="51.51127624511719,-0.1" zoom="12" map-id="DEMO_MAP_ID">
+    <div id="InteractiveMap">
+        <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen="" src="https://www.google.com/maps/embed/v1/place?q=London&key=AIzaSyBZ-T93vP687k0WNH5Y95n7PI3yYso9_QA"></iframe>
+
+        <!--<gmp-map center="51.51127624511719,-0.1" zoom="12" map-id="DEMO_MAP_ID">
             <gmp-advanced-marker position="51.51127624511719,-0.1" title="My location">
             </gmp-advanced-marker>
-        </gmp-map>
+        </gmp-map>-->
     </div>
 
     <!--Script sources: A "defer" attribute ensures that the script is executed after the HTML has been fully parsed.-->
     <script src="GlobalScript.js" defer></script> <!--GlobalScript.js is the file that WOULD contain any JavaScript code that applies to all pages.-->
     <script src="JourneyPlannerScript.js" defer></script> <!--JourneyPlannerScript.js is the file that contains the JavaScript code for the Journey planner page. A "defer" attribute ensures that the script is executed after the HTML has been fully parsed.-->
-    <!--Script link for the map.-->
+    <!--Script link for the map.
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZ-T93vP687k0WNH5Y95n7PI3yYso9_QA&callback=console.debug&libraries=maps,marker&v=beta"></script>
+    -->
 </body>
 </html>

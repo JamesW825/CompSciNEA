@@ -65,11 +65,17 @@ body {
     border-radius: 10%;
 }
 
-/* Interactive Map styles: */
+/* Interactive Map styles: 
 gmp-map {
     height: 80%;
     width: 80%;
     margin-top: 50px;
     margin-left: 230px;
     text-align: center;
+} */
+.InteractiveMap {
+    height: 500px;
+    width: 500px;
+    margin-top: 50px;
+    margin-left: 230px;
 }
