@@ -73,7 +73,7 @@ gmp-map {
     margin-left: 230px;
     text-align: center;
 } */
-.InteractiveMap {
+#InteractiveMap {
     height: 500px;
     width: 500px;
     margin-top: 50px;
