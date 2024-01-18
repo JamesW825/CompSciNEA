@@ -65,6 +65,23 @@ body {
     border-radius: 10%;
 }
 
+/* Ribbon styles:
+.ribbon-menu {
+    height: 5%;
+    width: 100%;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    padding-top: 15px;
+}
+.top-menu-section {
+    margin-bottom: 5px;
+    background-color: black;
+}
+*/
+
 /* Interactive Map styles: 
 gmp-map {
     height: 80%;
