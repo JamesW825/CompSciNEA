@@ -49,13 +49,6 @@ h2 {color: red; margin-left: 20px;}
     padding-top: 15px;
     margin-top: 80px;
 }
-.blank-space {
-    height: 37.5%; /* This WILL need to be adjusted as you add more to the menu. */
-    width: 200px;
-    display: flex;
-    visibility: hidden;
-    background-color: black;
-}
 #QuickMenu {
     margin-top: 0px;
     margin-bottom: 10px;
@@ -75,7 +68,7 @@ h2 {color: red; margin-left: 20px;}
     background-color: black;
 }
 .menu-item {
-    padding: 10px;
+    /* padding: 10px; */
     color: white;
     text-decoration: none;
     display: block;
@@ -84,6 +77,18 @@ h2 {color: red; margin-left: 20px;}
 .menu-item:hover {
     background-color: grey;
     border-radius: 10%;
+}
+#PageButton {
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 15px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.1s;
+    background-color: black;
 }
 
 /* Ribbon styles: */
@@ -111,13 +116,13 @@ h2 {color: red; margin-left: 20px;}
     font-size: 30px;
     color: white;
     display: inline-block;
-    white-space: nowrap;
+    white-space: nowrap; /* This is so text is  */
     translate: 15px -30px; /* This is so the page title is in the middle of the ribbon. */
 }
 
 /* Interactive Map styles: */
 .InteractiveMap {
-    height: 600px;
+    height: 700px;
     width: 100%;
     margin-top: 15px;
     display: flex;

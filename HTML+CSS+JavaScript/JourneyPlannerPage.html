@@ -10,21 +10,18 @@
 <body>
     <div class="ribbon-menu"> <!--This is the ribbon at the top of the screen on the website.-->
         <img src="TFL-logoBlue.jpg" alt="TfL blue logo" class="TfL-BlueLogo">
-        <!--<p id="Title">Tube Travel - NEA Project</p> (Try to put this in ribbon)-->
+        <p id="Title">Tube Travel - Journey Planner - NEA Project</p>
     </div>
     <div class="side-menu"> <!--This is the left side menu.-->
-        <p id="QuickMenu">Quick access:</p><hr id="HRmenu">
+        <p id="QuickMenu">Quick access:</p><hr id="HRmenu"> <!--The name "HRmenu" was given due to the tag <hr> to display a horizontal line/'rule'.-->
         <div class="menu-section">
             <a href="HomePage.html" class="menu-item">
-                <button class="menu-item" id="PageButton">🏠 Home & Map 🗺️</button>
-            </a>
-            <hr id="HRmenu"> <!--The name "HRmenu" was given due to the tag <hr> to display a horizontal line/'rule'.-->
+                <button class="menu-section" id="PageButton">🏠 Home & Map 🗺️</button> <!--Used class="menu-section" so that it fills the entire size of the dedicated/assigned section for that page.-->
+            </a><hr id="HRmenu">
         </div>
-
         <a href="#" class="menu-item">🏠 Home & Map 🗺️</a><hr id="HRmenu">
         <a href="#" class="menu-item">Journey Planner 📆</a><hr id="HRmenu">
         <a href="#" class="menu-item">🚇 Line status & Disruptions ⚠️</a><hr id="HRmenu">
-        <a href="#" class="blank-space"></a><hr id="HRmenu"> <!--This leaves a gap in the side menu, so that less needed/important parts are at the bottom of the screen.-->
         <a href="#" class="menu-item">Accessibility ♿</a><hr id="HRmenu">
         <a href="#" class="menu-item">Settings ⚙️</a><hr id="HRmenu">
         <a href="#" class="menu-item">About & App info ℹ️</a><hr id="HRmenu">
@@ -40,7 +37,6 @@
         -->
     </div>
     <div class="page-content">
-        <h1>Tube Travel - Journey Planner - NEA Project</h1>
         <p id="infoParagraph">Plan your next journey using the map and fields below to calculate a route.</p>
         <div>
             <iframe class="InteractiveMap" style="border:0" loading="lazy" allowfullscreen="" src="https://www.google.com/maps/embed/v1/place?q=London&key=AIzaSyBZ-T93vP687k0WNH5Y95n7PI3yYso9_QA"></iframe>
@@ -50,8 +46,5 @@
     <!--Script sources: A "defer" attribute ensures that the script is executed after the HTML has been fully parsed.-->
     <script src="GlobalScript.js" defer></script> <!--GlobalScript.js is the file that WOULD contain any JavaScript code that applies to all pages.-->
     <script src="JourneyPlannerScript.js" defer></script> <!--JourneyPlannerScript.js is the file that contains the JavaScript code for the Journey planner page. A "defer" attribute ensures that the script is executed after the HTML has been fully parsed.-->
-    <!--Script link for the map.
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZ-T93vP687k0WNH5Y95n7PI3yYso9_QA&callback=console.debug&libraries=maps,marker&v=beta"></script>
-    -->
 </body>
 </html>
