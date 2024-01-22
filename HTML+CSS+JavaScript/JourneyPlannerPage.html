@@ -8,6 +8,10 @@
     <title>Tube Travel - Journey Planner - NEA Project </title>
 </head>
 <body>
+    <div class="ribbon-menu"> <!--This is the ribbon at the top of the screen on the website.-->
+        <img src="TFL-logoBlue.jpg" alt="TfL blue logo" class="TfL-BlueLogo">
+        <!--<p id="Title">Tube Travel - NEA Project</p> (Try to put this in ribbon)-->
+    </div>
     <div class="side-menu"> <!--This is the left side menu.-->
         <p id="QuickMenu">Quick access:</p><hr id="HRmenu">
         <div class="menu-section">
@@ -35,13 +39,12 @@
         About & App info: About the app (What it does, How it works, etc); App info (i.e. versions, etc); References/Bibliography; 
         -->
     </div>
-    <div id="InteractiveMap">
-        <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen="" src="https://www.google.com/maps/embed/v1/place?q=London&key=AIzaSyBZ-T93vP687k0WNH5Y95n7PI3yYso9_QA"></iframe>
-
-        <!--<gmp-map center="51.51127624511719,-0.1" zoom="12" map-id="DEMO_MAP_ID">
-            <gmp-advanced-marker position="51.51127624511719,-0.1" title="My location">
-            </gmp-advanced-marker>
-        </gmp-map>-->
+    <div class="page-content">
+        <h1>Tube Travel - Journey Planner - NEA Project</h1>
+        <p id="infoParagraph">Plan your next journey using the map and fields below to calculate a route.</p>
+        <div>
+            <iframe class="InteractiveMap" style="border:0" loading="lazy" allowfullscreen="" src="https://www.google.com/maps/embed/v1/place?q=London&key=AIzaSyBZ-T93vP687k0WNH5Y95n7PI3yYso9_QA"></iframe>
+        </div>
     </div>
 
     <!--Script sources: A "defer" attribute ensures that the script is executed after the HTML has been fully parsed.-->

@@ -1,12 +1,12 @@
 /* This file is for any styles that applies to all pages of the website, in order to keep consistency. 
-For example: side menu for page navigation, background colours, fonts and more. */
+For example: side menu for page navigation, background colours, fonts and more.
+Collate similar parts (headers, side menus, forms etc). Condense/simplify file when nearer completion, take header 2 for example. */
 
 /* TfL UI design guide colours: 
 Beck blue (dark blue): #0019A8 - Corporate Blue or TfL Blue. It is used to provide reassurance, highlight good service and for primary buttons.
 Johnston black (black): #03071C - This blue-black has been chosen to reduce eye strain while retaining the appearance of black. Johnston Black is primarily used for type.
 For this website however, black (#000000) would be sufficient, as it is very close.
-White: #FFFFFF - Use plenty of white. It’s our default canvas.
-*/
+White: #FFFFFF - Use plenty of white. It’s our default canvas. */
 
 /* General styles: */
 head {
@@ -28,24 +28,31 @@ body {
 }
 
 /* Header styles: */
-
+h1 {
+    color: navy;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    /* margin-left: 20px; */
+    text-align: center;
+}
+h2 {color: red; margin-left: 20px;}
 
 /* Side menu styles: */
 .side-menu {
+    top: 0;
+    left: 0;    
     height: 100%;
     width: 200px;
     display: block;
     position: fixed;
-    top: 0;
-    left: 0;
     background-color: black;
     padding-top: 15px;
     margin-top: 80px;
 }
 .blank-space {
-    height: 42.5%; /* This WILL need to be adjusted as you add more to the menu. */
+    height: 37.5%; /* This WILL need to be adjusted as you add more to the menu. */
     width: 200px;
-    display: block;
+    display: flex;
     visibility: hidden;
     background-color: black;
 }
@@ -85,51 +92,33 @@ body {
     left: 0;    
     height: 80px;
     width: 100%;
-    display: flex;
     position: fixed;
     align-items: center;
     justify-content: space-between;
-    background-color: black;
-}
-.top-menu-section {
-    top: 0;
-    left: 0;
-    height: 80px;
-    width: 100%;
-    background-color: black;
-}
-.top-menu-item {
-    width: 200px;
-    display: inline-block;
     background-color: black;
 }
 .TfL-BlueLogo {
     top: 0;
     left: 0;
     height: 80px;
-    width: 200px;
+    width: 200px !important; /* !important is used to override the default width of the image. */
 }
 #Title {
     height: 80px;
-    width: 80px;
-    margin-top: 5px;
-    margin-left: 10px;
-    size: 28;
+    width: 550px;
+    margin-top: 3px; 
+    margin-bottom: 3px;
+    font-size: 30px;
     color: white;
-    display: block;
+    display: inline-block;
+    white-space: nowrap;
+    translate: 15px -30px; /* This is so the page title is in the middle of the ribbon. */
 }
 
-/* Interactive Map styles: 
-gmp-map {
-    height: 80%;
-    width: 80%;
-    margin-top: 50px;
-    margin-left: 230px;
-    text-align: center;
-} */
-#InteractiveMap {
-    height: 500px;
-    width: 500px;
-    margin-top: 50px;
-    margin-left: 230px;
+/* Interactive Map styles: */
+.InteractiveMap {
+    height: 600px;
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
 }

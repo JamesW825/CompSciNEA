@@ -5,3 +5,16 @@ body {
     margin: 0;
     padding: 0;
 }
+
+/* Header styles: */
+
+/* Paragraph styles: */
+#infoParagraph {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: black;
+}
