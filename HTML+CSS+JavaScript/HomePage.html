@@ -22,8 +22,8 @@
                 <button class="menu-section" id="PageButton">Journey Planner 📆</button> <!--Used class="menu-section" so that it fills the entire size of the dedicated/assigned section for that page.-->
             </a><hr id="HRmenu">
         </div>
-        <a href="#" class="menu-item">🏠 Home & Map 🗺️</a><hr id="HRmenu">
-        <a href="#" class="menu-item">Journey Planner 📆</a><hr id="HRmenu">
+        <!--<a href="#" class="menu-item">🏠 Home & Map 🗺️</a><hr id="HRmenu">
+        <a href="#" class="menu-item">Journey Planner 📆</a><hr id="HRmenu">-->
         <a href="#" class="menu-item">🚇 Line status & Disruptions ⚠️</a><hr id="HRmenu">
         <a href="#" class="menu-item">Accessibility ♿</a><hr id="HRmenu">
         <a href="#" class="menu-item">Settings ⚙️</a><hr id="HRmenu">
@@ -40,7 +40,6 @@
         -->
     </div>
     <div class="page-content">
-
         <h2>Tube line:</h2>
         <form id ="LineSelection">
             <label for="Central"> Central line</label>
@@ -56,8 +55,7 @@
         <p>This is background <a href="https://content.tfl.gov.uk/large-print-tube-map.pdf">information</a> about the website.</p>
 
         <!--Link and download of a tube map.-->
-        <h2>Tube map link and download:</h2>
-        <a href="https://content.tfl.gov.uk/large-print-tube-map.pdf">Get a tube map here!</a><br><br>
+        <h2>Tube map link and download:</h2><a href="https://content.tfl.gov.uk/large-print-tube-map.pdf">Get a tube map here!</a><br><br>
         
         <button id="APIbutton">Live line status</button><br><br>
         
@@ -66,7 +64,7 @@
     </div>
     
     <!--Script sources: A "defer" attribute ensures that the script is executed after the HTML has been fully parsed.-->
-    <script src="GlobalScript.js" defer></script> <!--GlobalScript.js is the file that WOULD contain any JavaScript code that applies to all pages. -->
+    <script src="GlobalScript.js" defer></script> <!--GlobalScript.js is the file that contains any JavaScript code that applies to all pages. -->
     <script src="HomePageScript.js" defer></script> <!--HomePageScript.js is the file that contains the JavaScript code for the Home page. -->
     <script src="HomePageAltScript.js" defer></script> <!--HomePageAltScript.js is the file that contains alternative JavaScript code to test a different request to the API.-->
     <!--Script link for the map.-->

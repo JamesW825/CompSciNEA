@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="GlobalStyles.css"> <!--GlobalStyles.css is the file that WOULD contain any styles that applies to all pages.-->
+    <link rel="stylesheet" href="GlobalStyles.css"> <!--GlobalStyles.css is the file that contains any styles that applies to all pages.-->
     <!--Journey Planner page:-->
     <link rel="stylesheet" href="JourneyPlannerStyles.css"> <!--JourneyPlannerStyles.css is the file that contains the CSS code for the styles and looks of the Journey planner page.-->
     <title>Tube Travel - Journey Planner - NEA Project </title>
@@ -19,8 +19,8 @@
                 <button class="menu-section" id="PageButton">🏠 Home & Map 🗺️</button> <!--Used class="menu-section" so that it fills the entire size of the dedicated/assigned section for that page.-->
             </a><hr id="HRmenu">
         </div>
-        <a href="#" class="menu-item">🏠 Home & Map 🗺️</a><hr id="HRmenu">
-        <a href="#" class="menu-item">Journey Planner 📆</a><hr id="HRmenu">
+        <!--<a href="#" class="menu-item">🏠 Home & Map 🗺️</a><hr id="HRmenu">
+        <a href="#" class="menu-item">Journey Planner 📆</a><hr id="HRmenu">-->
         <a href="#" class="menu-item">🚇 Line status & Disruptions ⚠️</a><hr id="HRmenu">
         <a href="#" class="menu-item">Accessibility ♿</a><hr id="HRmenu">
         <a href="#" class="menu-item">Settings ⚙️</a><hr id="HRmenu">
@@ -37,14 +37,15 @@
         -->
     </div>
     <div class="page-content">
-        <p id="infoParagraph">Plan your next journey using the map and fields below to calculate a route.</p>
+        <p id="infoParagraph">Plan your next journey using the map and fields below to calculate a route. Get a tube map link and download <a href="https://content.tfl.gov.uk/large-print-tube-map.pdf">here!</a></p>
         <div>
-            <iframe class="InteractiveMap" style="border:0" loading="lazy" allowfullscreen="" src="https://www.google.com/maps/embed/v1/place?q=London&key=AIzaSyBZ-T93vP687k0WNH5Y95n7PI3yYso9_QA"></iframe>
+            <iframe class="InteractiveMap" style="border:0" loading="eager" allowfullscreen="" src="https://www.google.com/maps/embed/v1/place?q=London&key=AIzaSyBZ-T93vP687k0WNH5Y95n7PI3yYso9_QA"></iframe>
         </div>
+        <iframe class="InteractiveMap" src="https://geo-devrel-javascript-samples.web.app/samples/layer-transit/app/dist/" allow="fullscreen; "></iframe>
     </div>
 
     <!--Script sources: A "defer" attribute ensures that the script is executed after the HTML has been fully parsed.-->
-    <script src="GlobalScript.js" defer></script> <!--GlobalScript.js is the file that WOULD contain any JavaScript code that applies to all pages.-->
-    <script src="JourneyPlannerScript.js" defer></script> <!--JourneyPlannerScript.js is the file that contains the JavaScript code for the Journey planner page. A "defer" attribute ensures that the script is executed after the HTML has been fully parsed.-->
+    <script src="GlobalScript.js" defer></script> <!--GlobalScript.js is the file that contains any JavaScript code that applies to all pages.-->
+    <script src="JourneyPlannerScript.js" defer></script> <!--JourneyPlannerScript.js is the file that contains the JavaScript code for the Journey planner page.-->
 </body>
 </html>
