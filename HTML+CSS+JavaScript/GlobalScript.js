@@ -25,20 +25,3 @@ function PageSwitchCase(section) {
     }
 }
 document.getElementById('PageButton').addEventListener('click', PageSwitchCase);
-
-// Function for the Interactive Map. (Home page and Journey Planner page only)
-function initMap() {
-    const map = new google.maps.Map(document.getElementById("map"), {
-      center: { lat: -34.397, lng: 150.644 },
-      zoom: 8,
-      styles: [
-        {
-          featureType: "poi",
-          stylers: [{ visibility: "off" }],
-        },
-      ],
-    });
- 
-    const transitLayer = new google.maps.TransitLayer();
-    transitLayer.setMap(map);
-}

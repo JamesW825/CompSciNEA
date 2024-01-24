@@ -1,3 +1,5 @@
+// This file contains the JavaScript code that that applies to the Home page of the website.
+
 // A test function to call the TfL API and log the response to the console.
 function callTfLAPI() {
     console.log('Button clicked'); // To check the button click handler is working.
@@ -47,7 +49,7 @@ function callTfLAPI() {
                 });
                 console.log('Processed line statuses:', status);
 
-                // Displaying the line status in the HTML file (index.html).
+                // Displaying the line status in the HTML file (HomePage.html).
                 const statusContainer = document.getElementById('status-container');
                 // Clear any existing content in the container
                 statusContainer.innerHTML = '';

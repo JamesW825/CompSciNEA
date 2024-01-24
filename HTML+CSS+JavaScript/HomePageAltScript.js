@@ -1,13 +1,13 @@
-// This file contains the JavaScript code that that applies to the Home page of the website.
+// This file contains the alternative JavaScript code that that applies to the Home page of the website.
 
 // A test function to call the TfL API and log the response to the console.
 function APIcall2() {
     console.log('Button 2 clicked'); // To check the button click handler is working.
-    // Replace 'YOUR_API_KEY' with your actual TfL API key (if required).
     const primaryApiKey2 = 'c3dd5c006828420c9f7696a37292384e';
     const secondaryApiKey2 = '0358cd3e5f7b44c9a43aec6b16a73d0d';
     
-    const modes = 'tube,dlr,overground' // Replaced with test data.
+    // Parameters for the Status and Disruptions API request:
+    const modes = 'tube,dlr,overground'
     const apiUrl2 = `https://api.tfl.gov.uk/Line/Mode/${modes}/Disruption`; // The backticks (`) are used to create a template literal. This allows you to embed expressions or variables within a string.
 
     // Use the primary key for the app_id parameter: urlWithPrimaryApiKey2
@@ -32,11 +32,9 @@ function APIcall2() {
             // Handle the API response data here:
             console.log('TfL API Disruptions Response:', data);
             
-            // Check if data is valid and contains the information you need.
-            // Putting it all together, the entire if statement evaluates to `true` only if all three conditions are met:
-            // - `data` is not `null` or `undefined`.
-            // - `data` is an array.
-            // - The array has at least one element.
+            /* Check if data is valid and contains the information you need.
+            Putting it all together, the entire if statement evaluates to `true` only if all three conditions are met:
+            1: `data` is not `null` or `undefined`. 2: `data` is an array. 3: The array has at least one element. */
             if (data && Array.isArray(data) && data.length > 0) {
                 // Process the data:
                 const disruptions = data.map(disruption => {
@@ -49,11 +47,11 @@ function APIcall2() {
                 });
                 console.log('Processed Disruptions:', disruptions);
 
-                // Displaying the disruptions in the HTML file (index.html).
+                // Displaying the disruptions in the HTML file (HomePage.html).
                 const disruptionsContainer = document.getElementById('disruptions-container');
-                // Clear any existing content in the container
+                // Clear any existing content in the container:
                 disruptionsContainer.innerHTML = '';
-                // Create and append HTML elements to display each disruption
+                // Create and append HTML elements to display each disruption:
                 disruptions.forEach(disruption => {
                     const disruptionElement = document.createElement('div');
                     disruptionElement.innerHTML = `
@@ -65,16 +63,14 @@ function APIcall2() {
                     `;
                     disruptionsContainer.appendChild(disruptionElement);
                 });
-            } else {
-                console.log('No disruptions found');
-            }
+            } else {console.log('No disruptions found');}
         })
         .catch(error => {
-            // Handle errors during the API request
+            // Handle errors during the API request:
             console.error('Error calling TfL API:', error.message);
         });
 }
-// Attach the function to the button click event
+// Attach the function to the button click event:
 // Removal of the parentheses after `callTfLAPI` makes it so the function will be called when the button is clicked, not immediately when setting up the event listener.
 document.getElementById('APIbutton2').addEventListener('click', APIcall2);
 

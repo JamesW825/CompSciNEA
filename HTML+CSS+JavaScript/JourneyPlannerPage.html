@@ -39,9 +39,25 @@
     <div class="page-content">
         <p id="infoParagraph">Plan your next journey using the map and fields below to calculate a route. Get a tube map link and download <a href="https://content.tfl.gov.uk/large-print-tube-map.pdf">here!</a></p>
         <div>
-            <iframe class="InteractiveMap" style="border:0" loading="eager" allowfullscreen="" src="https://www.google.com/maps/embed/v1/place?q=London&key=AIzaSyBZ-T93vP687k0WNH5Y95n7PI3yYso9_QA"></iframe>
+            <iframe class="InteractiveMap" loading="eager" allow="fullscreen; " src="https://geo-devrel-javascript-samples.web.app/samples/layer-transit/app/dist/"></iframe>
         </div>
-        <iframe class="InteractiveMap" src="https://geo-devrel-javascript-samples.web.app/samples/layer-transit/app/dist/" allow="fullscreen; "></iframe>
+        <div class="JourneyPlanningFields">
+            <h2>Plan your journey:</h2>
+            <form id="JourneyPlanForm">
+                <label for="StartLocation">Start location:</label><input type="text" id="StartLocation" name="StartLocation"><br>
+                <label for="EndLocation">End location:</label><input type="text" id="EndLocation" name="EndLocation"><br>
+                <label for="Date">Date:</label><input type="date" id="Date" name="Date"><br>
+                <label for="Time">Time:</label><input type="time" id="Time" name="Time"><br>
+                <label for="ArriveBy">Arrive by:</label><input type="time" id="ArriveBy" name="ArriveBy"><br>
+                <label for="LeaveAfter">Leave after:</label><input type="time" id="LeaveAfter" name="LeaveAfter"><br><br>
+                <label for="FastestRoute">Fastest route:</label><input type="checkbox" id="FastestRoute" name="FastestRoute"><br>
+                <label for="FewestChanges">Fewest changes:</label><input type="checkbox" id="FewestChanges" name="FewestChanges"><br>
+                <label for="LeastWalking">Least walking:</label><input type="checkbox" id="LeastWalking" name="LeastWalking"><br>
+                <label for="WalkingSpeed">Walking speed:</label><input type="range" id="WalkingSpeed" name="WalkingSpeed" min="0" max="10" value="5"><br>
+                <label for="MaxWalkingTime">Max walking time (in minutes):</label><input type="number" id="MaxWalkingTime" name="MaxWalkingTime" min="0" max="60" value="30"><br><br>
+                <button id="SubmitJourneyFields">Submit and find journey</button><br>
+            </form>
+            </div>
     </div>
 
     <!--Script sources: A "defer" attribute ensures that the script is executed after the HTML has been fully parsed.-->
