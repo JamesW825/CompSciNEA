@@ -2,12 +2,19 @@
     1. A "defer" attribute in terms of a <script> tag, ensures that the script is executed after the HTML has been fully parsed.
     2. An `href="#"` attribute is often used in anchor (<a>) tags to create a hyperlink that doesn't navigate to a new page or location but instead performs some other action on the current page. The # symbol is commonly used as a placeholder for such links.
     3. A <span> tag is a generic container that is used to group inline elements and apply styles to a specific section of text. It is often used to style a specific part of the text without affecting the overall structure of the document.
-    4. 
+    4. Help with tables:
+    `<table>`: This is the opening tag for the table element. It is used to define a table in HTML. `</table>`: This is the closing tag for the table element.
+    `<thead>`: This is the opening tag for the table header element. It is used to group the header content in a table.
+    `<tr>`: This is the opening tag for a table row. It defines a row in the table. `</tr>`: This is the closing tag for a table row.
+    `<th>`: This is the opening tag for a table header cell. It is used to define a header cell in a table. Header cells are typically used to label columns or rows. `</th>`: This is the closing tag for a table header cell.
+    `<tbody>`: This is the opening tag for the table body element. It is used to group the body content in a table. `</tbody>`: This is the closing tag for the table body element.
+    `<td>`: This is the opening tag for a table data cell. It is used to define a regular cell in a table, containing data. `</td>`: This is the closing tag for a table data cell.
+    5. 
 
 ~ ~ ~ In JavaScript: ~ ~ ~
     1. The backticks (`) are used to create a template literal. This allows you to embed expressions or variables within a string.
     2. The two URL components, `urlWithPrimaryApiKey` and `urlWithSecondaryApiKey`, are combined using string concatenation before making the API request. This ensures that both the `app_id` and `app_key` parameters are included in the API request, providing the necessary authentication for your application to access the TfL API.
-    3. Removal of the parentheses() after `callTfLAPI` makes it so the function will be called when the button is clicked, not immediately when setting up the event listener.
+    3. Removal of the parentheses() after a function Eg:`callTfLAPI` makes it so the function will be called when the button is clicked, not immediately when setting up the event listener.
     4. 
 
 ~ ~ ~ In CSS: ~ ~ ~
@@ -22,6 +29,10 @@ Part 4: Decipher API response, obtaining and displaying infromation that I requi
 Part 4.5: Get API to gather all line information. Have it be displayed in a menu that the user selects the line they wish to know about. 
     Eg: Like "TfL Go" does after clicking "Live status", only showing the lines that has isssues, then all other lines in "Good service" being as one part.
     To do this, do the equivalent of a for loop containg an if statement, to see if the API responce says/contains "Good service" to determine where the line goes.
+
+~ ~ ~ Other: ~ ~ ~
+    1. A passive event listener is one that declares it won't call `preventDefault` on the event. This declaration allows the browser to optimize the handling of the event and make scrolling smoother.
+    2. 3** Redirection: The HTTP status codes in this class indicates that additional action is required on the client-side in order to complete the request.
 
 ~ ~ ~ TfL API keys: ~ ~ ~
 Primary key: 

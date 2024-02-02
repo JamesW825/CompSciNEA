@@ -1,13 +1,13 @@
 // This file contains the alternative JavaScript code that that applies to the Home page of the website.
 
-// A test function to call the TfL API and log the response to the console.
+// Function to call TfL API for the live status of the tube lines, and to log and display the response.
 function APIcall2() {
     console.log('Button 2 clicked'); // To check the button click handler is working.
     const primaryApiKey2 = 'c3dd5c006828420c9f7696a37292384e';
     const secondaryApiKey2 = '0358cd3e5f7b44c9a43aec6b16a73d0d';
     
     // Parameters for the Status and Disruptions API request:
-    const modes = 'tube,dlr,overground'
+    const modes = 'tube,dlr,overground'; // Modes of transport are limited for simplicity of the website.
     const apiUrl2 = `https://api.tfl.gov.uk/Line/Mode/${modes}/Disruption`; // The backticks (`) are used to create a template literal. This allows you to embed expressions or variables within a string.
 
     // Use the primary key for the app_id parameter: urlWithPrimaryApiKey2

@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Visit and read the 'README.md' file for a more in-depth description.">
+    <meta name="keywords" content="HTML, CSS, Java script, Python, NEA, Project, Tube, Travel, London, Underground, Transport, TFL, API, Live data, Map, Line">
     <link rel="stylesheet" href="GlobalStyles.css"> <!--GlobalStyles.css is the file that contains any styles that applies to all pages.-->
     <!--Journey Planner page:-->
     <link rel="stylesheet" href="JourneyPlannerStyles.css"> <!--JourneyPlannerStyles.css is the file that contains the CSS code for the styles and looks of the Journey planner page.-->
@@ -28,7 +31,7 @@
         <!--Alternate menu items: 
         
         Additional menu items:
-        In Home/Map: An interactive map (duh); Layers function (Tube map, Night map?, Transport, Satelite etc); Tube map download button and not a link; Locate button?; 
+        In Home/Map: An interactive map (duh); Layers function (Tube map, Night map?, Transport, Satellite etc); Tube map download button and not a link; Locate button?; 
         Journey Planner: Form to enter start and end locations, time, date, etc; Submit button (i.e. need a request to API); 
         Line status & Disruptions: Line status from API (i.e. open, closed, part-closed, etc); Live line disruptions (i.e. delays, planned works, etc); 
         Ignore Accessibility. 
@@ -38,30 +41,53 @@
     </div>
     <div class="page-content">
         <p id="infoParagraph">Plan your next journey using the map and fields below to calculate a route. Get a tube map link and download <a href="https://content.tfl.gov.uk/large-print-tube-map.pdf">here!</a></p>
-        <div>
-            <iframe class="InteractiveMap" loading="eager" allow="fullscreen; " src="https://geo-devrel-javascript-samples.web.app/samples/layer-transit/app/dist/"></iframe>
-        </div>
-        <div class="JourneyPlanningFields">
-            <h2>Plan your journey:</h2>
-            <form id="JourneyPlanForm">
-                <label for="StartLocation">Start location:</label><input type="text" id="StartLocation" name="StartLocation"><br>
-                <label for="EndLocation">End location:</label><input type="text" id="EndLocation" name="EndLocation"><br>
-                <label for="Date">Date:</label><input type="date" id="Date" name="Date"><br>
-                <label for="Time">Time:</label><input type="time" id="Time" name="Time"><br>
-                <label for="ArriveBy">Arrive by:</label><input type="time" id="ArriveBy" name="ArriveBy"><br>
-                <label for="LeaveAfter">Leave after:</label><input type="time" id="LeaveAfter" name="LeaveAfter"><br><br>
-                <label for="FastestRoute">Fastest route:</label><input type="checkbox" id="FastestRoute" name="FastestRoute"><br>
-                <label for="FewestChanges">Fewest changes:</label><input type="checkbox" id="FewestChanges" name="FewestChanges"><br>
-                <label for="LeastWalking">Least walking:</label><input type="checkbox" id="LeastWalking" name="LeastWalking"><br>
-                <label for="WalkingSpeed">Walking speed:</label><input type="range" id="WalkingSpeed" name="WalkingSpeed" min="0" max="10" value="5"><br>
-                <label for="MaxWalkingTime">Max walking time (in minutes):</label><input type="number" id="MaxWalkingTime" name="MaxWalkingTime" min="0" max="60" value="30"><br><br>
-                <button id="SubmitJourneyFields">Submit and find journey</button><br>
-            </form>
-            </div>
-    </div>
+        <div><iframe class="InteractiveMap" loading="eager" allow="fullscreen; " src="https://geo-devrel-javascript-samples.web.app/samples/layer-transit/app/dist/"></iframe></div>        
+        <table>
+            <thead><tr> <!--Table headings:-->
+                <th>Plan your journey:</th><th>Recommended routes:</th> <!--Simplifying/Condensing code lines.-->
+                <th><button id="TableHeaderButton">Live status: </button></th></tr></thead> <!--Live status would be transfered/displayed on this or both pages, the button is used to get/refresh data.-->
+            <tbody>
+                <tr>
+                    <td> <!--This is the left side of the table.--> <!--Old `div` tags: <div class="JourneyPlanningSection"><div class="JourneyPlanningFields">-->
+                        <form id="JourneyPlanningForm">
+                            <!--Form fields:
+                                - A 'class' attribute will allow me to collate similar labels and input types to apply styles easily.
+                                - A 'required' attribute will ensure that the user must enter a value before submitting the form.-->
+                            <label class="FormFieldLabel" for="StartLocation">Start location: </label><input type="text" class="TextField" id="StartLocation" name="StartLocation" required><br> 
+                            <label class="FormFieldLabel" for="EndLocation">End location: </label><input type="text" class="TextField" id="EndLocation" name="EndLocation" required><br> 
+                            <label class="FormFieldLabel" for="Date">Date: </label><input type="date" class="DateField" id="Date" name="Date" min="2024-01-01"><br> <!--The parsed value is always formatted yyyy-mm-dd, despite showing dd-mm-yyyy.-->
+                            <label class="FormFieldLabel" for="Time">Time: </label><input type="time" class="TimeField" id="Time" name="Time"><br> <!--The parsed value is always formatted HHmm.-->
+                            <!--<label class="FormFieldLabel" for="ArriveBy">Arrive by:</label><input type="time" id="ArriveBy" name="ArriveBy"><br> (Removed as it is not a parameter in the URL.)
+                            <label class="FormFieldLabel" for="LeaveAfter">Leave after:</label><input type="time" id="LeaveAfter" name="LeaveAfter"><br><br>-->
+                            <label class="FormFieldLabel" for="JourneyPreference">Journey Preference: </label><select class="JourneyPreference" id="journeyPreference"> <!--No `required` attribute needed as it is a dropdown menu.-->
+                                <optgroup label="Add a journey preference:">
+                                    <option value="leasttime" id="leasttime">Least time</option>
+                                    <option value="leastinterchange" id="leastinterchange">Least changes</option>
+                                    <option value="leastwalking" id="leastwalking">Least walking</option>
+                                </optgroup>
+                            </select><br><br>
+                            <button type="button" id="SubmitJourneyFields">Submit and find journey </button><br> <!--This button will submit the form and call the API and find the journey.
+                            Not including `type="button"` attribute when <button> is used within a form would submit the form by default, sometimes refreshing the page.-->
+                        </form><br><br>
+                    </td> 
 
+                    <td> <!--This is the middle section of the table.-->
+                        *Display API route responce*
+                        <div id="JourneyContainer"></div> <!--Section where journey responce is displayed.-->
+                    </td>
+
+                    <td> <!--This is the right side of the table.-->
+                        *Display API live status response*
+                        <div id="disruptions-container"></div> <!--Section where status responce is displayed. Ready to be transferred/copied.-->
+                    </td>
+                </tr>
+                <!-- Add more rows as needed.-->
+            </tbody>
+        </table>
+        
+    </div>
     <!--Script sources: A "defer" attribute ensures that the script is executed after the HTML has been fully parsed.-->
-    <script src="GlobalScript.js" defer></script> <!--GlobalScript.js is the file that contains any JavaScript code that applies to all pages.-->
-    <script src="JourneyPlannerScript.js" defer></script> <!--JourneyPlannerScript.js is the file that contains the JavaScript code for the Journey planner page.-->
+    <script async src="GlobalScript.js" defer></script> <!--GlobalScript.js is the file that contains any JavaScript code that applies to all pages.-->
+    <script async src="JourneyPlannerScript.js" defer></script> <!--JourneyPlannerScript.js is the file that contains the JavaScript code for the Journey planner page.-->
 </body>
 </html>

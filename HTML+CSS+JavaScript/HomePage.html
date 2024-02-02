@@ -60,14 +60,12 @@
         <button id="APIbutton">Live line status</button><br><br>
         
         <button id="APIbutton2">Live line disruptions</button><br><br>
-        <div id="disruptions-container"></div>
+        <div id="disruptions-container"></div> <!--Section where responce is displayed.-->
     </div>
     
     <!--Script sources: A "defer" attribute ensures that the script is executed after the HTML has been fully parsed.-->
-    <script src="GlobalScript.js" defer></script> <!--GlobalScript.js is the file that contains any JavaScript code that applies to all pages. -->
-    <script src="HomePageScript.js" defer></script> <!--HomePageScript.js is the file that contains the JavaScript code for the Home page. -->
-    <script src="HomePageAltScript.js" defer></script> <!--HomePageAltScript.js is the file that contains alternative JavaScript code to test a different request to the API.-->
-    <!--Script link for the map.-->
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZ-T93vP687k0WNH5Y95n7PI3yYso9_QA&callback=console.debug&libraries=maps,marker&v=beta"></script>
+    <script async src="GlobalScript.js" defer></script> <!--GlobalScript.js is the file that contains any JavaScript code that applies to all pages. -->
+    <script async src="HomePageScript.js" defer></script> <!--HomePageScript.js is the file that contains the JavaScript code for the Home page. -->
+    <script async src="HomePageAltScript.js" defer></script> <!--HomePageAltScript.js is the file that contains alternative JavaScript code to test a different request to the API.-->
 </body>
 </html>

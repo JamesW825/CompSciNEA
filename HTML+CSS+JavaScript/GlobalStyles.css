@@ -126,5 +126,5 @@ h2 {color: red; margin-left: 20px;}
     width: 100%;
     margin-top: 15px;
     display: flex;
-    border: black 2px solid;
+    border: 2px solid black ; /* Matches with the table border. */
 }

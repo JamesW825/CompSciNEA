@@ -17,3 +17,40 @@ body {
     font-size: 24px;
     color: black;
 }
+
+/* Journey Planning Section styles:
+Includes: Table, Form, Response and Live Status. */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th {
+    background-color: #f2f2f2;
+}
+#TableHeaderButton {
+    background-color: #f2f2f2; /* Matches with the table header. */
+}
+th, td {
+    border: 2px solid black; /* Matches with the interactive map border. */
+    text-align: left;
+    padding: 8px;
+}
+.JourneyPlanningSection {
+    width: 100%;
+}
+.JourneyPlanningFields {
+    margin: 20px;
+}
+.FormFieldLabel {
+    font-weight: bold;
+}
+.TextField, .DateField, .TimeField, .JourneyPreference {
+    margin-bottom: 10px;
+}
+
+/* Form styles: Setting up style section for the form.
+.JourneyPlanningSection
+.JourneyPlanningFields
+#JourneyPlanningForm
+#JourneyContainer
+*/
