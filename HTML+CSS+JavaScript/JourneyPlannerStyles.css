@@ -20,37 +20,85 @@ body {
 
 /* Journey Planning Section styles:
 Includes: Table, Form, Response and Live Status. */
+/* Table styles: */
 table {
     width: 100%;
     border-collapse: collapse;
+    color: black;
+    background-color: white;
 }
+/* Table heading styles: */
 th {
-    background-color: #f2f2f2;
+    font-size: 16px;
+    color: white;
+    background-color: blue; /* Old colour: #f2f2f2 */
 }
-#TableHeaderButton {
-    background-color: #f2f2f2; /* Matches with the table header. */
+/* Column 1 heading styles: */
+#PlanningJourney {
+    width: 20%; /* Changed to % from px to make other columns fixed too. */
+    font-size: 16px;
+    color: white;
+    background-color: blue;
 }
+/* Column 2 heading styles: */
+#JourneyResults {
+    width: 40%; /* Changed to % from px to make other columns fixed too. */
+    font-size: 16px;
+    color: white;
+    background-color: blue;
+}
+/* Column 2 and 3 refresh button styles: */
+#LiveStatusButton, #JourneyRefresh {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    text-wrap: nowrap;
+    border: none; /* So it is flush with remainder of heading. */
+    padding: 0px;
+    color: white;
+    background-color: blue;
+}
+/* Heading and data cell styles: */
 th, td {
     border: 2px solid black; /* Matches with the interactive map border. */
     text-align: left;
+    vertical-align: top; /* Aligns text to the top of the cell. */
     padding: 8px;
 }
-.JourneyPlanningSection {
-    width: 100%;
-}
-.JourneyPlanningFields {
-    margin: 20px;
-}
+/* Form field text styles: */
 .FormFieldLabel {
+    font-size: 14px;
     font-weight: bold;
 }
+/* Form input field styles: */
 .TextField, .DateField, .TimeField, .JourneyPreference {
-    margin-bottom: 10px;
+    background-color: whitesmoke; /* Light-Light grey. */
+    margin-bottom: 10px; 
 }
-
-/* Form styles: Setting up style section for the form.
-.JourneyPlanningSection
-.JourneyPlanningFields
-#JourneyPlanningForm
-#JourneyContainer
-*/
+/* API: Live Status request styles section:
+- Adjusted for this page, being different to home page. */
+/* Display of live status and journey planning responce styles: */
+#disruptions-container, #JourneyContainer {
+    align-content: left; /* Aligns the text to the left of the container. */
+    text-wrap: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: left; /* Aligns the text to the left of the container. */
+    justify-content: left; /* ^Above^ */
+    margin: 0 auto;
+    margin-top: 5px;
+    background-color: silver;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+/* Display of responce fields styles: */
+#DisplayDisruptionElement, #DisplayJourneyElement {
+    text-align: left;
+    margin: 10px;
+}
+/* Horizontal line styles: */
+hr {
+    color: black;
+    background-color: black;
+    height: 1px;
+}

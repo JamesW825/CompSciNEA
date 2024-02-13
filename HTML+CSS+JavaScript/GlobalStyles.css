@@ -116,7 +116,7 @@ h2 {color: red; margin-left: 20px;}
     font-size: 30px;
     color: white;
     display: inline-block;
-    white-space: nowrap; /* This is so text is  */
+    white-space: nowrap; /* This is so text is along the ribbon. */
     translate: 15px -30px; /* This is so the page title is in the middle of the ribbon. */
 }
 

@@ -57,15 +57,27 @@
         <!--Link and download of a tube map.-->
         <h2>Tube map link and download:</h2><a href="https://content.tfl.gov.uk/large-print-tube-map.pdf">Get a tube map here!</a><br><br>
         
-        <button id="APIbutton">Live line status</button><br><br>
+        <!--<button id="APIbutton">Status API call </button><br><br>-->
         
-        <button id="APIbutton2">Live line disruptions</button><br><br>
+        <button id="LiveStatusButton">Live line status and disruptions </button><br><br>
         <div id="disruptions-container"></div> <!--Section where responce is displayed.-->
+
+        <!--Trial to insert a tube map onto website - Successful... but:
+            - Move so that it is ontop of the google map.
+            - Add a send to back/front feature so desired one can be shown. 
+            - OR add a transparent/opacity to the tube map - top image.-->
+        <h2>Tube map:</h2>
+        <object id="TubeMapPDF"
+            type="application/pdf"
+            data="https://content.tfl.gov.uk/large-print-tube-map.pdf"
+            height="1000px"
+            width="100%"
+        ></object>
     </div>
     
     <!--Script sources: A "defer" attribute ensures that the script is executed after the HTML has been fully parsed.-->
-    <script async src="GlobalScript.js" defer></script> <!--GlobalScript.js is the file that contains any JavaScript code that applies to all pages. -->
+    <script async src="GlobalScript.js" defer></script> <!--GlobalScript.js is the file that contains any JavaScript code that applies to all pages.-->
     <script async src="HomePageScript.js" defer></script> <!--HomePageScript.js is the file that contains the JavaScript code for the Home page. -->
-    <script async src="HomePageAltScript.js" defer></script> <!--HomePageAltScript.js is the file that contains alternative JavaScript code to test a different request to the API.-->
+    <script async src="HomePageAltScript.js" defer></script> <!--HomePageAltScript.js is the file that contains alternative JavaScript code for the Home page.-->
 </body>
 </html>

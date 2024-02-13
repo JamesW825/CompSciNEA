@@ -2,7 +2,7 @@
 
 // Function for a Journey Planner search:
 function JourneyPlannerSearch() {
-    console.log('Journey Planner submit button clicked'); // To check the button click handler is working.
+    console.log('Journey Planner submit/refresh button clicked.'); // To check the button click handler is working.
     const JourneyPrimaryApiKey = 'c3dd5c006828420c9f7696a37292384e';
     const JourneySecondaryApiKey = '0358cd3e5f7b44c9a43aec6b16a73d0d';
     // Parameters for the Journey Planner API request: The backticks (`) are used to create a template literal. This allows you to embed expressions or variables within a string.
@@ -78,23 +78,22 @@ function JourneyPlannerSearch() {
                 });
                 console.log('Processed Journey/Route:', JourneyPlanRoute);
 
-                // Displaying the calculated journey/route in the HTML file (JourneyPlannerPage.html).
+                // Displaying the calculated journey/route in the HTML file (JourneyPlannerPage.html):
                 const JourneyContainer = document.getElementById('JourneyContainer');
                 JourneyContainer.innerHTML = ''; // To clear any existing content in the container.
-
                 // Create and append HTML elements to display each route:
                 JourneyPlanRoute.forEach(Route => {
                     const JourneyElement = document.createElement('div');
-                    JourneyElement.innerHTML = `
-                        <p><strong></strong> ${Route.commonName}</p>
-                        <p><strong>Latitude:</strong> ${Route.lat}</p>
-                        <p><strong>Longitude:</strong> ${Route.lon}</p>
+                    JourneyElement.innerHTML = ` <!--The purpose of the id is to apply styles to the fields.-->
+                        <p id="DisplayJourneyElement"><strong></strong> ${Route.commonName}</p>
+                        <p id="DisplayJourneyElement"><strong>Latitude:</strong> ${Route.lat}</p>
+                        <p id="DisplayJourneyElement"><strong>Longitude:</strong> ${Route.lon}</p>
                         <!--<p><strong>Naptan ID:</strong> ${Route.naptanId}</p> These mean nothing to the user. Data can be retrieved as it might be useful for other requests if needed.
                         <p><strong>Place Type:</strong> ${Route.placeType}</p>
                         <p><strong>Stop Type:</strong> ${Route.StopType}</p>-->
-                        <p><strong>From:</strong> ${Route.from}</p>
-                        <p><strong>To:</strong> ${Route.to}</p>
-                        <!-- Add more fields as required -->
+                        <p id="DisplayJourneyElement"><strong>From:</strong> ${Route.from}</p>
+                        <p id="DisplayJourneyElement"><strong>To:</strong> ${Route.to}</p>
+                        <!--Add more fields as required.-->
                         <hr>
                     `;
                     JourneyContainer.appendChild(JourneyElement);
