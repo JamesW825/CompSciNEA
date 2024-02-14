@@ -35,7 +35,7 @@ function LiveStatusAPI() {
     const secondaryApiKey2 = '0358cd3e5f7b44c9a43aec6b16a73d0d';
     
     // Parameters for the Status and Disruptions API request:
-    const modes = 'tube,dlr,overground'; // Modes of transport are limited for simplicity of the website.
+    const modes = 'tube,elizabeth-line,dlr,overground'; // Modes of transport are limited for simplicity of the website.
     const apiUrl2 = `https://api.tfl.gov.uk/Line/Mode/${modes}/Disruption`; // The backticks (`) are used to create a template literal. This allows you to embed expressions or variables within a string.
 
     // Use the primary key for the app_id parameter: urlWithPrimaryApiKey2
@@ -59,11 +59,10 @@ function LiveStatusAPI() {
         .then(data => {
             // Handle the API response data here:
             console.log('TfL API Live Status/Disruptions response:', data);
-            
             /* Check if data is valid and contains the information you need.
             Putting it all together, the entire if statement evaluates to `true` only if all three conditions are met:
             1: `data` is not `null` or `undefined`. 2: `data` is an array. 3: The array has at least one element. */
-            if (data && Array.isArray(data) && data.length > 0) {
+            if (data && Array.isArray(data) && data.length > 0) { // To test else statement, change `data.length > 0` to `data.length < 0`.
                 // Process the data:
                 const disruptions = data.map(disruption => {
                     return {
@@ -81,7 +80,7 @@ function LiveStatusAPI() {
                 // Create and append HTML elements to display each disruption:
                 disruptions.forEach(disruption => {
                     const disruptionElement = document.createElement('div');
-                    disruptionElement.innerHTML = ` <!--The purpose of the id is to apply styles to the fields.-->
+                    disruptionElement.innerHTML = `<!--The purpose of the id is to apply styles to the fields.-->
                         <p id="DisplayDisruptionElement"><strong>Status/Closure Text:</strong> ${disruption.closureText}</p>
                         <p id="DisplayDisruptionElement"><strong>Description:</strong> ${disruption.description}</p>
                         <p id="DisplayDisruptionElement"><strong>Affected Routes:</strong> ${disruption.affectedRoutes.join(', ')}</p>
@@ -90,7 +89,15 @@ function LiveStatusAPI() {
                     `;
                     disruptionsContainer.appendChild(disruptionElement);
                 });
-            } else {console.log('No disruptions found');}
+            } else {
+                console.log('No disruptions found');
+                // Display a message in the HTML files to indicate that no disruptions were found:
+                const disruptionsContainer = document.getElementById('disruptions-container');
+                disruptionsContainer.innerHTML = `<p id="DisplayDisruptionElement">No disruptions found on the Tube, Elizabeth line, DLR or Overground services.</p>
+                    <p id="DisplayDisruptionElement">For more information, or just to be sure, visit the <a href="https://tfl.gov.uk/tube-dlr-overground/status/">TfL website</a>.</p>
+                    <p id="DisplayDisruptionElement">Have a nice journey!</p>
+                `;
+            }
         })
         .catch(error => {
             // Handle errors during the API request:
