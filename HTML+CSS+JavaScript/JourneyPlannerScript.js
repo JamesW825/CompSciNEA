@@ -12,7 +12,13 @@ function JourneyPlannerSearch() {
     const time = encodeURIComponent(document.getElementById('Time').value); // Unrequired field.
     const mode = 'tube,dlr,overground'; // Modes of transport are limited for simplicity of the website, so it is predefined/preset.
     const journeyPreference = encodeURIComponent(document.getElementById('journeyPreference').value); // Unrequired field for request/URL but it's useful - treating it as required due to the dropdown menu. 
+    // Checking all parameters are retrieved and logged correctly:
+    console.log('Start location:', from);
+    console.log('End location:', to);
+    console.log('Date:', date);
+    console.log('Time:', time); // 'mode' not included as this is predefined/preset.
     console.log('Chosen journey preference:', journeyPreference); // To check the chosen journey preference is being retrieved and logged.
+
     const JourneyAPIurl = `https://api.tfl.gov.uk/Journey/JourneyResults/${from}/to/${to}${date}${time}${journeyPreference}${mode}`; 
     // EDITED URL: const JourneyAPIurl = `https://api.tfl.gov.uk/Journey/JourneyResults/${encodeURIComponent(from)}/to/${encodeURIComponent(to)}${encodeURIComponent(date)}${encodeURIComponent(time)}${encodeURIComponent(journeyPreference)}${encodeURIComponent(mode)}`;
         /* Add to documentation: Old parameters/variables:
