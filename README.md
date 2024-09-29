@@ -1,16 +1,4 @@
-# Tube Travel ~ OCR A-Level Computer Science NEA Project ~ H447(03/04)
-
-# Personal detatils
-    - Name: James Wilson
-    - Candiate number: 9260
-    - Center number: 16339
-    - Email: wilson2j17@gbhs.co.uk
-
-TfL API:
-Primary key: 
-c3dd5c006828420c9f7696a37292384e
-Secondary key:
-0358cd3e5f7b44c9a43aec6b16a73d0d
+l# Tube Travel ~ OCR A-Level Computer Science NEA Project ~ H447(03/04)
 
 # My Project
 ## Background and Context
